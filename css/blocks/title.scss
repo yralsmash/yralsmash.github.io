@@ -1,0 +1,14 @@
+.title {
+  color: $yellow;
+  font-size: 45px;
+  margin-bottom: 20px;
+text-align: center;
+
+  &--color-black {
+    color: black;
+  }
+
+  &--color-white {
+    color: white;
+  }
+}

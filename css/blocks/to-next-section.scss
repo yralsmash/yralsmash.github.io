@@ -1,0 +1,10 @@
+.to-next-section-arrow:after {
+  width: 29px;
+  height: 15px;
+  position: absolute;
+  content: '';
+  background-image: url(../../img/icons/arrow-scroll.svg);
+  background-repeat: no-repeat;
+  top: 95%;
+  left: 50%;
+}

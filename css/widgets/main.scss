@@ -1,0 +1,29 @@
+// colors
+
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+// normalize
+
+@import "../_misc/normalize.scss";
+
+// setups
+
+@import "../_misc/mixins.scss";
+@import "../_misc/fonts.scss";
+@import "../_misc/layout.scss";
+
+
+// blocks
+
+@import "../blocks/hero.scss";
+@import "../blocks/header.scss";
+@import "../blocks/nav.scss";
+@import "../blocks/btn.scss";
+@import "../blocks/to-next-section.scss";
+@import "../blocks/title.scss";
+@import "../blocks/best.scss";
+@import "../blocks/reviews.scss";
+@import "../blocks/form.scss";
