@@ -6,4 +6,10 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13px;
+
+  &--reset {
+    background: transparent;
+    text-transform: none;
+    font-size: 100%;
+  }
 }

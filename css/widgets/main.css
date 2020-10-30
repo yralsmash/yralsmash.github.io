@@ -503,6 +503,11 @@ button {
   text-transform: uppercase;
   font-size: 13px;
 }
+.btn--reset {
+  background: transparent;
+  text-transform: none;
+  font-size: 100%;
+}
 
 .to-next-section-arrow:after {
   width: 29px;
@@ -592,6 +597,7 @@ button {
 
 .form__row {
   display: flex;
+  margin-bottom: 11px;
 }
 
 .form__block {
@@ -602,22 +608,43 @@ button {
   margin-right: 0;
 }
 
-.form__input {
+.form__input-elem {
   width: 100%;
+  padding: 9px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 
-.form__textarea {
-  width: 100%;
+.form__input-elem:focus {
+  outline: none;
+  border-color: orange;
 }
 
-.form__controlls {
+.form__input-elem--textarea {
+  resize: none;
+}
+
+.form__buttons-payemen,
+.form__to-call {
   display: flex;
   -webkit-user-select: none;
           user-select: none;
 }
 
+.form__radio {
+  display: inline-flex;
+  margin-bottom: 18px;
+  margin-right: 20px;
+}
+
 .form__radio-real {
   display: none;
+}
+.form__radio-real:checked ~ .form__radio-visible:after {
+  opacity: 1;
+}
+.form__radio-real:checked ~ .form__radio-text {
+  color: #cb2376;
 }
 
 .form__radio-visible {
@@ -641,5 +668,15 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+}
+
+.form__radio-visible--square {
+  width: 20px;
+  height: 20px;
+  border-radius: 0%;
+  border: 1px solid #c9c9c9;
+  background-image: linear-gradient(to top, #ededed, #ffffff);
+  position: relative;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
