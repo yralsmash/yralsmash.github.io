@@ -1,13 +1,13 @@
 .nav {
   margin-right: 15px;
-}
 
-.nav__list {
-  display: flex;
-}
+  &__list {
+    display: flex;
+  }
 
-.nav__item:last-child .nav__link:after {
-  display: none;
+  &__item:last-child &__link:after {
+    display: none;
+  }
 }
 
 .nav__link {

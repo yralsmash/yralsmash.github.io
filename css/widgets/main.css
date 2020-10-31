@@ -432,22 +432,18 @@ button {
   background: url("../../img/bg/hero-bg.jpg") center center/cover no-repeat;
   position: relative;
 }
-
 .hero__container {
   display: flex;
   flex: 1;
 }
-
 .hero__desc {
   font-size: 30px;
   color: #fff;
 }
-
 .hero__content {
   display: flex;
   align-items: center;
 }
-
 .hero__container {
   flex: 0.75;
 }
@@ -458,7 +454,6 @@ button {
   justify-content: space-between;
   padding-top: 12px;
 }
-
 .header__buttons {
   display: flex;
   align-items: center;
@@ -467,11 +462,9 @@ button {
 .nav {
   margin-right: 15px;
 }
-
 .nav__list {
   display: flex;
 }
-
 .nav__item:last-child .nav__link:after {
   display: none;
 }
@@ -536,18 +529,15 @@ button {
 .best {
   background: url("../../img/bg/best-bg.png") center center/cover no-repeat;
 }
-
 .best__list {
   display: flex;
 }
-
 .best__item {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .best__desc {
   text-align: center;
 }
@@ -555,7 +545,6 @@ button {
 .reviews {
   background: #000;
 }
-
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
@@ -594,12 +583,10 @@ button {
   color: #fff;
   display: flex;
 }
-
 .form__row {
   display: flex;
   margin-bottom: 11px;
 }
-
 .form__block {
   flex: 1;
   margin-right: 20px;
@@ -614,19 +601,16 @@ button {
   border: 2px solid transparent;
   border-radius: 5px;
 }
-
 .form__input-elem:focus {
   outline: none;
   border-color: orange;
 }
-
 .form__input-elem--textarea {
   resize: none;
 }
 
-.form__buttons-payemen,
+.form__buttons-payement,
 .form__to-call {
-  display: flex;
   -webkit-user-select: none;
           user-select: none;
 }
@@ -636,7 +620,6 @@ button {
   margin-bottom: 18px;
   margin-right: 20px;
 }
-
 .form__radio-real {
   display: none;
 }
@@ -669,14 +652,7 @@ button {
   transform: translate(-50%, -50%);
   opacity: 0;
 }
-
 .form__radio-visible--square {
-  width: 20px;
-  height: 20px;
   border-radius: 0%;
-  border: 1px solid #c9c9c9;
-  background-image: linear-gradient(to top, #ededed, #ffffff);
-  position: relative;
-  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */

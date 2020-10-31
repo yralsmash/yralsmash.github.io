@@ -1,18 +1,18 @@
 .best {
   background: url('../../img/bg/best-bg.png') center center / cover no-repeat;
-}
 
-.best__list{
-  display: flex;
-}
+  &__list {
+    display: flex;
+  }
 
-.best__item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.best__desc {
-  text-align: center;
+  &__desc {
+    text-align: center;
+  }
 }

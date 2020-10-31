@@ -3,9 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 12px;
-}
 
-.header__buttons {
-  display: flex;
-  align-items: center;
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
 }
