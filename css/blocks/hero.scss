@@ -7,8 +7,13 @@
     flex: 1;
   }
 
+  &__picture {
+    margin-right: 10px;
+  }
+
   &__desc {
-    font-size: 30px;
+    font-family: 'Lifehack Medium';
+    font-size: 70px;
     color: #fff;
   }
 

@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  min-width: 200px;
+  background: #ffffff;
+  bottom: 0;
+
+  &__side {
+    display: flex;
+  }
+
+  &__side--left {
+    justify-content: flex-start;
+  }
+}

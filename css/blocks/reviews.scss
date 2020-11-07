@@ -24,6 +24,8 @@
 }
 
 .reviews__hover-block {
+  padding: 30px;
+  color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -33,4 +35,13 @@
   opacity: 0;
   transform: scale(.8);
   transition: .5s;
+}
+
+.reviews__title {
+  margin: 20px 0px;
+  font-family: 'Gagalin Regular';
+}
+
+.reviews__text {
+  line-height: 1.75;
 }

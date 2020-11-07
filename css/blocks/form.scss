@@ -46,6 +46,7 @@
   display: inline-flex;
   margin-bottom: 18px;
   margin-right: 20px;
+  vertical-align: sub;
 
   &-real {
     display: none;
@@ -61,8 +62,8 @@
 }
 
 .form__radio-visible {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
@@ -72,8 +73,8 @@
   &:after{
     content: '';
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #cb2376;
     position: absolute;

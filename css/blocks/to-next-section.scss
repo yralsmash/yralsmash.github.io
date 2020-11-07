@@ -1,10 +1,16 @@
-.to-next-section-arrow:after {
-  width: 29px;
-  height: 15px;
+.to-next-section {
+  height: 0;
+  width: 0;
+  padding: 0;
   position: absolute;
-  content: '';
-  background-image: url(../../img/icons/arrow-scroll.svg);
-  background-repeat: no-repeat;
   top: 95%;
   left: 50%;
+}
+.to-next-section-arrow:after {
+  content: '';
+  width: 29px;
+  height: 15px;
+  background-image: url(../../img/icons/arrow-scroll.svg);
+  background-repeat: no-repeat;
+  position: absolute;
 }
