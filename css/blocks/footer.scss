@@ -1,14 +1,22 @@
 .footer {
   position: absolute;
   min-width: 200px;
-  background: #ffffff;
+  background: transparent;
   bottom: 0;
+  display: flex;
 
   &__side {
     display: flex;
-  }
+    flex: 1;
 
-  &__side--left {
-    justify-content: flex-start;
+    &--left {
+      justify-content: flex-start;
+      margin-left: 130px;
+    }
+
+    &--right {
+      justify-content: flex-end;
+      margin-right: 130px;
+    }
   }
 }

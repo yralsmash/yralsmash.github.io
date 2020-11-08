@@ -515,7 +515,6 @@ button {
   top: 95%;
   left: 50%;
 }
-
 .to-next-section-arrow:after {
   content: "";
   width: 29px;
@@ -668,6 +667,7 @@ button {
   border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
+  margin: auto;
   margin-right: 10px;
 }
 .form__radio-visible:after {
@@ -695,13 +695,65 @@ button {
 .footer {
   position: absolute;
   min-width: 200px;
-  background: #ffffff;
+  background: transparent;
   bottom: 0;
+  display: flex;
 }
 .footer__side {
   display: flex;
+  flex: 1;
 }
 .footer__side--left {
   justify-content: flex-start;
+  margin-left: 130px;
+}
+.footer__side--right {
+  justify-content: flex-end;
+  margin-right: 130px;
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  position: relative;
+}
+
+.social__link {
+  display: flex;
+}
+
+.social__link:after {
+  background: #000;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 22px;
+  background-image: url(../../img/icons/vk.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacts__location {
+  font-style: normal;
+}
+
+.phone {
+  font-size: 15px;
+  display: flex;
+  color: #e35028;
+  font-weight: bold;
+  text-decoration: none;
+}
+.phone:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=main.css.map */

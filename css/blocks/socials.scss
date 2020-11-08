@@ -1,0 +1,23 @@
+.social__list {
+  display: flex;
+
+}
+
+.social__item {
+  position: relative;
+}
+
+.social__link {
+  display: flex;
+}
+
+.social__link:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 26px;
+  height: 22px;
+  background-image: url(../../img/icons/vk.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
