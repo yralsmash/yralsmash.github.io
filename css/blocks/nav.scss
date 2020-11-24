@@ -1,5 +1,5 @@
 .nav {
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 
   &__list {
     display: flex;
@@ -13,7 +13,7 @@
 .nav__link {
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -25,6 +25,6 @@
     display: block;
     border-radius: 50%;
     background-color: #fff;
-    margin: 0 10px;
+    margin: 0 0.625rem;
   }
 }

@@ -1,15 +1,15 @@
 .btn {
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   background: $red;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
 
   &--reset {
     background: transparent;
     text-transform: none;
-    font-size: 100%;
+    font-size: 1rem;
   }
 }

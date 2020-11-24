@@ -11,12 +11,14 @@
 
     &--left {
       justify-content: flex-start;
-      margin-left: 130px;
+      margin-left: 8.125rem;
+      flex: 1 1;
     }
 
     &--right {
       justify-content: flex-end;
-      margin-right: 130px;
+      margin-right: 8.125rem;
+      flex: 1 5;
     }
   }
 }

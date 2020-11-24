@@ -8,12 +8,12 @@
 
   &__row {
     display: flex;
-    margin-bottom: 11px;
+    margin-bottom: 0.685rem;
   }
 
   &__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 
   .form__right &__block:last-child {
@@ -23,8 +23,8 @@
 
 .form__input-elem {
   width: 100%;
-  padding: 9px 20px;
-  border: 2px solid transparent;
+  padding: 9px 1.25rem;
+  border: 0.125rem solid transparent;
   border-radius: 5px;
 
   &:focus {
@@ -44,8 +44,8 @@
 
 .form__radio {
   display: inline-flex;
-  margin-bottom: 18px;
-  margin-right: 20px;
+  margin-bottom: 1.125rem;
+  margin-right: 1.25rem;
   vertical-align: sub;
 
   &-real {
@@ -69,7 +69,7 @@
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
   margin: auto;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 
   &:after{
     content: '';

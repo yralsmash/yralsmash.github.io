@@ -354,6 +354,7 @@ template {
 html, body {
   height: 100%;
   line-height: normal;
+  font-size: 16px;
 }
 
 body {
@@ -373,7 +374,8 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  width: auto;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,7 +388,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
+  min-width: 0;
   min-height: 100%;
   overflow: hidden;
 }
@@ -420,6 +422,8 @@ footer {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-osx-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -435,29 +439,29 @@ button {
 }
 .hero__container {
   display: flex;
-  flex: 1;
-}
-.hero__picture {
-  margin-right: 10px;
-}
-.hero__desc {
-  font-family: "Lifehack Medium";
-  font-size: 70px;
-  color: #fff;
+  flex: 0.75;
 }
 .hero__content {
   display: flex;
   align-items: center;
 }
-.hero__container {
-  flex: 0.75;
+.hero__picture {
+  margin-right: 0.625rem;
+}
+.hero__burger-img {
+  max-width: 100%;
+}
+.hero__desc {
+  font-family: "Lifehack Medium";
+  font-size: 4.375rem;
+  color: #fff;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
+  padding-top: 0.75rem;
 }
 .header__buttons {
   display: flex;
@@ -465,7 +469,7 @@ button {
 }
 
 .nav {
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 .nav__list {
   display: flex;
@@ -477,7 +481,7 @@ button {
 .nav__link {
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -489,22 +493,22 @@ button {
   display: block;
   border-radius: 50%;
   background-color: #fff;
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 
 .btn {
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   background: #e35028;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .btn--reset {
   background: transparent;
   text-transform: none;
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 .to-next-section {
@@ -526,8 +530,8 @@ button {
 
 .title {
   color: #f9b43b;
-  font-size: 75px;
-  margin-bottom: 20px;
+  font-size: 4.6875rem;
+  margin-bottom: 1.25rem;
   text-align: center;
   font-family: "Gagalin Regular";
 }
@@ -545,19 +549,20 @@ button {
   display: flex;
 }
 .best__item {
+  width: 300px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .best__desc {
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-align: center;
 }
 .best__title {
   font-family: "Lifehack Medium";
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 1.875rem;
+  margin-bottom: 0.625rem;
 }
 
 .reviews {
@@ -570,7 +575,7 @@ button {
 }
 
 .reviews__item {
-  width: 25%;
+  width: calc(100% / 4);
   height: 50%;
   filter: grayscale(100%);
   background: center center/cover no-repeat;
@@ -582,7 +587,7 @@ button {
 }
 
 .reviews__hover-block {
-  padding: 30px;
+  padding: 1.875rem;
   color: #fff;
   position: absolute;
   top: 0;
@@ -596,7 +601,7 @@ button {
 }
 
 .reviews__title {
-  margin: 20px 0px;
+  margin: 1.25rem 0px;
   font-family: "Gagalin Regular";
 }
 
@@ -614,11 +619,11 @@ button {
 }
 .form__row {
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: 0.685rem;
 }
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 .form__right .form__block:last-child {
   margin-right: 0;
@@ -626,8 +631,8 @@ button {
 
 .form__input-elem {
   width: 100%;
-  padding: 9px 20px;
-  border: 2px solid transparent;
+  padding: 9px 1.25rem;
+  border: 0.125rem solid transparent;
   border-radius: 5px;
 }
 .form__input-elem:focus {
@@ -646,8 +651,8 @@ button {
 
 .form__radio {
   display: inline-flex;
-  margin-bottom: 18px;
-  margin-right: 20px;
+  margin-bottom: 1.125rem;
+  margin-right: 1.25rem;
   vertical-align: sub;
 }
 .form__radio-real {
@@ -668,7 +673,7 @@ button {
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
   margin: auto;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .form__radio-visible:after {
   content: "";
@@ -705,11 +710,13 @@ button {
 }
 .footer__side--left {
   justify-content: flex-start;
-  margin-left: 130px;
+  margin-left: 8.125rem;
+  flex: 1 1;
 }
 .footer__side--right {
   justify-content: flex-end;
-  margin-right: 130px;
+  margin-right: 8.125rem;
+  flex: 1 5;
 }
 
 .social__list {
@@ -731,8 +738,10 @@ button {
   width: 26px;
   height: 22px;
   background-image: url(../../img/icons/vk.svg);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-right: 1rem;
 }
 
 .contacts__location {
@@ -740,7 +749,7 @@ button {
 }
 
 .phone {
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   color: #e35028;
   font-weight: bold;
@@ -755,5 +764,54 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    max-width: 450px;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+  }
+
+  .hero__content {
+    flex-direction: column;
+  }
+
+  .best__list {
+    flex-direction: column;
+  }
+
+  .reviews__item {
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+
+  .reviews__item {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

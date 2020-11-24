@@ -31,3 +31,28 @@ $red: #e35028;
 @import "../blocks/footer.scss";
 @import "../blocks/socials.scss";
 @import "../blocks/contacts.scss";
+
+// media
+
+@media (max-width: 1200px) {
+  html {font-size: 15px;}
+}
+
+@media (max-width: 992px) {
+  html {font-size: 14px;}
+  .container {max-width: 750px;}
+}
+
+@media (max-width: 768px) {
+  html {font-size: 13px;}
+  .container {max-width: 450px;}
+  .nav__list {flex-wrap: wrap;}
+  .hero__content {flex-direction: column;}
+  .best__list {flex-direction: column;}
+  .reviews__item {width: calc(100% / 2);}
+}
+
+@media (max-width: 550px) {
+  html {font-size: 12px;}
+  .reviews__item {width: 100%;}
+}

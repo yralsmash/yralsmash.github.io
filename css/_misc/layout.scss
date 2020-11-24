@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   line-height: normal;
+  font-size: 16px;
 }
 
 body {
@@ -20,7 +21,8 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  width: auto;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +36,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
+  min-width: 0;
   min-height: 100%;
   overflow: hidden;
 }
@@ -71,6 +73,8 @@ footer {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-osx-box-sizing: border-box;
   box-sizing: border-box;
 }
 

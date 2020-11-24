@@ -9,7 +9,7 @@
 }
 
 .reviews__item {
-  width: 25%;
+  width: calc(100% / 4);
   height: 50%;
   filter: grayscale(100%);
   background: center center / cover no-repeat;
@@ -24,7 +24,7 @@
 }
 
 .reviews__hover-block {
-  padding: 30px;
+  padding: 1.875rem;
   color: #fff;
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@
 }
 
 .reviews__title {
-  margin: 20px 0px;
+  margin: 1.25rem 0px;
   font-family: 'Gagalin Regular';
 }
 
