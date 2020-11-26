@@ -1,4 +1,6 @@
 .footer {
+  display: flex;
+  justify-content: space-around;
   position: absolute;
   min-width: 200px;
   background: transparent;
@@ -7,18 +9,13 @@
 
   &__side {
     display: flex;
-    flex: 1;
 
     &--left {
       justify-content: flex-start;
-      margin-left: 8.125rem;
-      flex: 1 1;
     }
 
     &--right {
       justify-content: flex-end;
-      margin-right: 8.125rem;
-      flex: 1 5;
     }
   }
 }

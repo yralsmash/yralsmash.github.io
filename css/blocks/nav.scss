@@ -1,8 +1,9 @@
 .nav {
-  margin-right: 0.9375rem;
+  margin: 0 0.9rem;
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item:last-child &__link:after {

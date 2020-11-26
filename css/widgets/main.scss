@@ -31,6 +31,7 @@ $red: #e35028;
 @import "../blocks/footer.scss";
 @import "../blocks/socials.scss";
 @import "../blocks/contacts.scss";
+@import "../blocks/fixed-menu.scss";
 
 // media
 
@@ -40,19 +41,24 @@ $red: #e35028;
 
 @media (max-width: 992px) {
   html {font-size: 14px;}
-  .container {max-width: 750px;}
+  .container {max-width: 700px;}
+  .hero__burger-img {max-width: 100%; margin-top: -20px;}
 }
 
 @media (max-width: 768px) {
   html {font-size: 13px;}
   .container {max-width: 450px;}
   .nav__list {flex-wrap: wrap;}
-  .hero__content {flex-direction: column;}
-  .best__list {flex-direction: column;}
+  .hero__content {flex-direction: column-reverse;}
+  .hero__desc {font-size: 3.3rem;}
   .reviews__item {width: calc(100% / 2);}
+  .form__input-elem {padding: 5px 0rem;}
 }
 
-@media (max-width: 550px) {
+@media (max-width: 480px) {
   html {font-size: 12px;}
+  .best__list {flex-direction: column; align-items: center;}
   .reviews__item {width: 100%;}
+  .form {flex-direction: column;}
+  .social__list {flex-wrap: wrap;}
 }

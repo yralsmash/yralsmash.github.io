@@ -448,9 +448,6 @@ button {
 .hero__picture {
   margin-right: 0.625rem;
 }
-.hero__burger-img {
-  max-width: 100%;
-}
 .hero__desc {
   font-family: "Lifehack Medium";
   font-size: 4.375rem;
@@ -469,10 +466,11 @@ button {
 }
 
 .nav {
-  margin-right: 0.9375rem;
+  margin: 0 0.9rem;
 }
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
 }
 .nav__item:last-child .nav__link:after {
   display: none;
@@ -601,16 +599,19 @@ button {
 }
 
 .reviews__title {
-  margin: 1.25rem 0px;
+  margin: 1rem 0px;
   font-family: "Gagalin Regular";
+  font-size: 1.17rem;
 }
 
 .reviews__text {
   line-height: 1.75;
+  font-size: 1rem;
 }
 
 .order {
   background: #000;
+  position: relative;
 }
 
 .form {
@@ -698,6 +699,8 @@ button {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-around;
   position: absolute;
   min-width: 200px;
   background: transparent;
@@ -706,17 +709,12 @@ button {
 }
 .footer__side {
   display: flex;
-  flex: 1;
 }
 .footer__side--left {
   justify-content: flex-start;
-  margin-left: 8.125rem;
-  flex: 1 1;
 }
 .footer__side--right {
   justify-content: flex-end;
-  margin-right: 8.125rem;
-  flex: 1 5;
 }
 
 .social__list {
@@ -724,7 +722,7 @@ button {
 }
 
 .social__item {
-  position: relative;
+  margin: 0.5rem;
 }
 
 .social__link {
@@ -741,7 +739,6 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-right: 1rem;
 }
 
 .contacts__location {
@@ -766,6 +763,28 @@ button {
   margin-right: 5px;
 }
 
+.fixed__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 15px;
@@ -777,7 +796,12 @@ button {
   }
 
   .container {
-    max-width: 750px;
+    max-width: 700px;
+  }
+
+  .hero__burger-img {
+    max-width: 100%;
+    margin-top: -20px;
   }
 }
 @media (max-width: 768px) {
@@ -794,24 +818,41 @@ button {
   }
 
   .hero__content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
-  .best__list {
-    flex-direction: column;
+  .hero__desc {
+    font-size: 3.3rem;
   }
 
   .reviews__item {
     width: calc(100% / 2);
   }
+
+  .form__input-elem {
+    padding: 5px 0rem;
+  }
 }
-@media (max-width: 550px) {
+@media (max-width: 480px) {
   html {
     font-size: 12px;
   }
 
+  .best__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .reviews__item {
     width: 100%;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .social__list {
+    flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=main.css.map */

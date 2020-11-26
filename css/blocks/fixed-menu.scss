@@ -1,0 +1,23 @@
+.fixed__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__link {
+  &::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+  }
+}

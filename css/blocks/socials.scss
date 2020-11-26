@@ -1,10 +1,9 @@
 .social__list {
   display: flex;
-
 }
 
 .social__item {
-  position: relative;
+  margin: 0.5rem;
 }
 
 .social__link {
@@ -21,5 +20,4 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-right: 1rem;
 }
