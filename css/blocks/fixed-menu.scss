@@ -1,9 +1,5 @@
 .fixed__menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  position: fixed;
 }
 
 .menu__item {
@@ -13,11 +9,11 @@
 
 .menu__link {
   &::after {
-    content: '';
+    content: 'fffff';
     display: block;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    color: #fff;
+    color: rgb(228, 56, 56);
   }
 }

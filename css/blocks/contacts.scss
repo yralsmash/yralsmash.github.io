@@ -9,14 +9,20 @@
   font-weight: bold;
   text-decoration: none;
 
-  &:before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url('../../img/icons/phone.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-right: 5px;
+  &-icon {
+    width: 11px;
+    height: 11px;
+    fill:#E45028;
   }
+
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 20px;
+  //   height: 20px;
+  //   background-image: url('../../img/icons/phone.svg');
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   margin-right: 5px;
+  // }
 }

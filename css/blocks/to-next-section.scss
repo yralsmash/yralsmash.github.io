@@ -6,12 +6,18 @@
   top: 95%;
   left: 50%;
 
-  &-arrow:after {
-    content: '';
-    width: 29px;
-    height: 15px;
-    background-image: url(../../img/icons/arrow-scroll.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-  }
+  // &-arrow:after {
+  //   content: '';
+  //   width: 29px;
+  //   height: 15px;
+  //   background-image: url(../../img/icons/arrow-scroll.svg);
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  // }
+}
+
+.arrow-scroll-icon {
+  width: 29px;
+  height: 15px;
+  fill: #ffffff;
 }

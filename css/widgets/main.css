@@ -351,10 +351,13 @@ template {
   font-weight: 400;
   font-style: normal;
 }
-html, body {
-  height: 100%;
-  line-height: normal;
+html {
   font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -387,7 +390,6 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100%;
   min-width: 0;
   min-height: 100%;
   overflow: hidden;
@@ -448,10 +450,18 @@ button {
 .hero__picture {
   margin-right: 0.625rem;
 }
+.hero__burger-img {
+  max-width: 100%;
+}
 .hero__desc {
   font-family: "Lifehack Medium";
   font-size: 4.375rem;
   color: #fff;
+}
+
+.logo-icon {
+  width: 98.265px;
+  height: 74.317px;
 }
 
 .header {
@@ -517,13 +527,11 @@ button {
   top: 95%;
   left: 50%;
 }
-.to-next-section-arrow:after {
-  content: "";
+
+.arrow-scroll-icon {
   width: 29px;
   height: 15px;
-  background-image: url(../../img/icons/arrow-scroll.svg);
-  background-repeat: no-repeat;
-  position: absolute;
+  fill: #ffffff;
 }
 
 .title {
@@ -561,6 +569,24 @@ button {
   font-family: "Lifehack Medium";
   font-size: 1.875rem;
   margin-bottom: 0.625rem;
+}
+
+.meat-icon {
+  width: 96.428px;
+  height: 89.246px;
+  fill: #E35028;
+}
+
+.hand-icon {
+  width: 73px;
+  height: 85.875px;
+  fill: #F9B43B;
+}
+
+.natural-icon {
+  width: 88px;
+  height: 75.534px;
+  fill: #8BC03F;
 }
 
 .reviews {
@@ -727,18 +753,13 @@ button {
 
 .social__link {
   display: flex;
+  background: #000;
 }
 
-.social__link:after {
-  background: #000;
-  content: "";
-  display: block;
+.vk-icon, .fb-icon, .inst-icon, .twitter-icon {
   width: 26px;
   height: 22px;
-  background-image: url(../../img/icons/vk.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  fill: #ffffff;
 }
 
 .contacts__location {
@@ -752,23 +773,14 @@ button {
   font-weight: bold;
   text-decoration: none;
 }
-.phone:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../../img/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 5px;
+.phone-icon {
+  width: 11px;
+  height: 11px;
+  fill: #E45028;
 }
 
 .fixed__menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  position: fixed;
 }
 
 .menu__item {
@@ -777,82 +789,11 @@ button {
 }
 
 .menu__link::after {
-  content: "";
+  content: "fffff";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  color: #fff;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-
-  .container {
-    max-width: 700px;
-  }
-
-  .hero__burger-img {
-    max-width: 100%;
-    margin-top: -20px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-
-  .container {
-    max-width: 450px;
-  }
-
-  .nav__list {
-    flex-wrap: wrap;
-  }
-
-  .hero__content {
-    flex-direction: column-reverse;
-  }
-
-  .hero__desc {
-    font-size: 3.3rem;
-  }
-
-  .reviews__item {
-    width: calc(100% / 2);
-  }
-
-  .form__input-elem {
-    padding: 5px 0rem;
-  }
-}
-@media (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-
-  .best__list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .reviews__item {
-    width: 100%;
-  }
-
-  .form {
-    flex-direction: column;
-  }
-
-  .social__list {
-    flex-wrap: wrap;
-  }
+  color: #e43838;
 }
 /*# sourceMappingURL=main.css.map */

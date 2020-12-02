@@ -8,16 +8,23 @@
 
 .social__link {
   display: flex;
+  background: #000;
 }
 
-.social__link:after {
-  background: #000;
-  content: '';
-  display: block;
+// .social__link:after {
+//   background: #000;
+//   content: '';
+//   display: block;
+//   width: 26px;
+//   height: 22px;
+//   background-image: url(../../img/icons/vk.svg);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+// }
+
+.vk-icon, .fb-icon, .inst-icon, .twitter-icon {
   width: 26px;
   height: 22px;
-  background-image: url(../../img/icons/vk.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  fill: #ffffff;
 }
