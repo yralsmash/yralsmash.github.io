@@ -3,42 +3,69 @@
 
   &__list {
     display: flex;
+
+    @include phones {
+      flex-direction: column;
+    }
   }
 
   &__item {
-    width: 300px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 rem(10px);
+    margin-bottom: rem(30px);
+
+    @include tablets {
+      padding: 0;
+    }
+
+    @include phones {
+      flex-direction: initial;
+      padding: 0 rem(10px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    padding: 4%;
   }
 
   &__desc {
-    font-size: 0.9375rem;
+    font-size: rem(15px);
     text-align: center;
+
+    @include phones {
+      text-align: left;
+    }
   }
 
   &__title {
     font-family: 'Lifehack Medium';
-    font-size: 1.875rem;
-    margin-bottom: 0.625rem;
+    font-size: rem(30px);
+    margin-bottom: rem(10px);
   }
 }
 
 .meat-icon {
-  width: 96.428px;
-  height: 89.246px;
+  width: rem(100px);
+  height: rem(100px);
   fill: #E35028;
 }
 
 .hand-icon {
-  width: 73px;
-  height: 85.875px;
+  width: rem(100px);
+  height: rem(100px);
   fill: #F9B43B;
 }
 
 .natural-icon {
-  width: 88px;
-  height: 75.534px;
+  width: rem(100px);
+  height: rem(100px);
   fill: #8BC03F;
 }
+

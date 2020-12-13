@@ -1,28 +1,27 @@
+.contacts__block {
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    align-items: center;
+  }
+}
+
 .contacts__location {
   font-style: normal;
 }
 
 .phone {
-  font-size: 0.9375rem;
+  font-size: rem(17px);
   display: flex;
   color: $red;
   font-weight: bold;
   text-decoration: none;
+  margin-left: rem(5px);
+  align-items: center;
 
   &-icon {
-    width: 11px;
-    height: 11px;
-    fill:#E45028;
+    width: rem(12px);
+    height: rem(12px);
   }
-
-  // &:before {
-  //   content: '';
-  //   display: block;
-  //   width: 20px;
-  //   height: 20px;
-  //   background-image: url('../../img/icons/phone.svg');
-  //   background-repeat: no-repeat;
-  //   background-position: center center;
-  //   margin-right: 5px;
-  // }
 }

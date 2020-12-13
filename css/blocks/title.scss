@@ -1,9 +1,17 @@
 .title {
   color: $yellow;
-  font-size: 4.6875rem;
-  margin-bottom: 1.25rem;
+  font-size: rem(75px);
+  margin-bottom: rem(20px);
   text-align: center;
   font-family: 'Gagalin Regular';
+
+  @include tablets {
+    font-size: rem(63px);
+  }
+
+  @include phones {
+    font-size: rem(59px);
+    }
 
   &--color-black {
     color: black;

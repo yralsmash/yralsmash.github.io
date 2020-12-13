@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
   <title>Burger with King</title>
   <link rel="stylesheet" href="./css/widgets/main.css">
@@ -12,46 +13,60 @@
     <section class="hero section">
       <div class="container container--without-align">
         <header class="header">
-          <a href="#" class="logo">
-            <svg class="logo-icon">
-              <use xlink:href="./img/icons/sprite.svg#logo"></use>
-            </svg>
-          </a>
+          <div class="header__logo">
+            <a href="#" class="logo">
+              <svg class="logo-icon">
+                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
 
           <div class="header__buttons">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">о нас</a></li>
+            <div class="header__menu">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="#" class="nav__link">о нас</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">бургеры</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">бургеры</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">команда</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">команда</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">меню</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">меню</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">отзывы</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">отзывы</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">как мы работаем</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">как мы работаем</a></li>
 
-                <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
 
-              </ul>
-            </nav>
+                </ul>
+              </nav>
+            </div>
 
-            <a href="#" class="btn">заказать</a>
+            <div class="header__links">
+              <a href="#" class="btn">заказать</a>
+
+              <a href="#" class="hamburger-menu-link">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
+            </div>
           </div>
         </header>
 
         <div class="hero__container">
           <div class="hero__content">
-            <div class="hero__picture">
-              <img src="./img/hero/hero-burger.png" alt="Burger" class="hero__burger-img">
+            <div class="hero__left">
+              <div class="hero__picture">
+                <img src="./img/hero/hero-burger.png" alt="Burger" class="hero__burger-img">
+              </div>
             </div>
 
-            <div class="hero__text">
-              <span class="title">мы делаем</span>
+            <div class="hero__right">
+              <div class="hero__text">
+                <span class="title">мы делаем</span>
 
-              <span class="hero__desc">натуральные бургеры</span>
+                <div class="hero__desc">натуральные бургеры</div>
+              </div>
             </div>
           </div>
         </div>
@@ -126,6 +141,90 @@
                 <p>
                   Драма представляет собой деструктивный
                   цикл. Анапест представляет собой анапест.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="team section">
+      <div class="team__container">
+        <div class="title">команда</div>
+
+        <ul class="team__list">
+          <li class="team__item">
+            <a href="#" class="team__title">дэниэл редклиф</a>
+
+            <div class="team__desc">
+              <div class="team__desc-picture">
+                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+              </div>
+
+              <div class="team__desc-text">
+                <h3>Оператор</h3>
+
+                <p>С радостью поможем подобрать
+                  идеальный бургер и оформить
+                  заказ.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="team__item">
+            <a href="#" class="team__title">ричард джеймс</a>
+
+            <div class="team__desc team__desc--active">
+              <div class="team__desc-picture">
+                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+              </div>
+
+              <div class="team__desc-text">
+                <h3>Оператор</h3>
+
+                <p>С радостью поможем подобрать
+                  идеальный бургер и оформить
+                  заказ.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="team__item">
+            <a href="#" class="team__title">джейк финн</a>
+
+            <div class="team__desc">
+              <div class="team__desc-picture">
+                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+              </div>
+
+              <div class="team__desc-text">
+                <h3>Оператор</h3>
+
+                <p>С радостью поможем подобрать
+                  идеальный бургер и оформить
+                  заказ.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="team__item">
+            <a href="#" class="team__title">николай иванов</a>
+
+            <div class="team__desc">
+              <div class="team__desc-picture">
+                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+              </div>
+
+              <div class="team__desc-text">
+                <h3>Оператор</h3>
+
+                <p>С радостью поможем подобрать
+                  идеальный бургер и оформить
+                  заказ.
                 </p>
               </div>
             </div>
@@ -298,13 +397,13 @@
               <label for="" class="form__block">
                 <div class="form__block-title">Корпус</div>
 
-                <input type="text" class="form__input-elem" maxlength="5">
+                <input type="text" class="form__input-elem" maxlength="3">
               </label>
 
               <label for="" class="form__block">
                 <div class="form__block-title">Квартира</div>
 
-                <input type="text" class="form__input-elem" maxlength="5">
+                <input type="text" class="form__input-elem" maxlength="3">
               </label>
 
               <label for="" class="form__block">
@@ -326,7 +425,7 @@
 
             <div class="form__buttons">
               <div class="form__controlls">
-                <div class="form__buttons-payement">
+                <div class="form__row">
                   <label class="form__radio">
                     <input type="radio" name="answer" class="form__radio-real">
 
@@ -344,9 +443,9 @@
                   </label>
                 </div>
 
-                <div class="form__to-call">
+                <div class="form__row">
                   <label class="form__radio">
-                    <input type="radio" class="form__radio-real">
+                    <input type="checkbox" class="form__radio-real">
 
                     <div class="form__radio-visible form__radio-visible--square"></div>
 
@@ -355,7 +454,7 @@
                 </div>
               </div>
 
-              <div class="form__buttons-submit">
+              <div class="form__row">
                 <a href="#" class="btn">заказать</a>
 
                 <input type="reset" value="Очистить" class="btn btn--reset">
@@ -385,6 +484,7 @@
             </span>
           </div>
         </div>
+
         <div class="footer__side footer__side--right">
           <div class="socials">
             <ul class="social__list">
@@ -419,7 +519,6 @@
             </ul>
           </div>
         </div>
-
       </footer>
     </section>
   </div>
@@ -427,6 +526,7 @@
 
 <!-- fixed__menu -->
 <ul class="fixed__menu">
+  <li class="menu__item"><a href="#" class="menu__link"></a></li>
   <li class="menu__item"><a href="#" class="menu__link"></a></li>
   <li class="menu__item"><a href="#" class="menu__link"></a></li>
   <li class="menu__item"><a href="#" class="menu__link"></a></li>

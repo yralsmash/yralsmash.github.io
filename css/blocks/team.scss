@@ -1,0 +1,103 @@
+.team {
+  background: url('../../img/bg/team-bg.png') center center / cover no-repeat;
+  position: relative;
+
+  &__container {
+    padding: 5% 2% 0 7%;
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(#2f3234, .93);
+    color: #fff;
+
+    @include tablets {
+      left: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    margin: rem(20px) 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-family: 'Gagalin Regular';
+    font-size: rem(19px);
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+
+    @include tablets {
+      display: inline-flex;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      left: rem(-30px);
+      top: rem(8px);
+      border: rem(8px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom-width: 0;
+      border-left-width: rem(5px);
+      border-right-width: rem(5px);
+      position: absolute;
+      transition: .3s;
+    }
+  }
+}
+
+.team__desc {
+  padding: 3% 0;
+  display: none;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+  &--active {
+    display: flex;
+
+    .team__title {
+      color: $yellow;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(16px);
+  }
+
+  &-picture {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+  }
+
+  &-img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

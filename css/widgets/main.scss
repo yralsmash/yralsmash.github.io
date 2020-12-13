@@ -6,21 +6,23 @@ $black: #2f3234;
 $red: #e35028;
 
 // breakpoints
-$desktop:992px;
+
 $tablets:768px;
 $phones:480px;
-
 
 // normalize
 
 @import "../_misc/normalize.scss";
+
+// media
+
+@import "../_misc/media.scss";
 
 // setups
 
 @import "../_misc/mixins.scss";
 @import "../_misc/fonts.scss";
 @import "../_misc/layout.scss";
-
 
 // blocks
 
@@ -39,25 +41,5 @@ $phones:480px;
 @import "../blocks/socials.scss";
 @import "../blocks/contacts.scss";
 @import "../blocks/fixed-menu.scss";
-
-// media
-
-@import "../_misc/media.scss";
-
-// @media (max-width: 768px) {
-//   html {font-size: 15px;}
-//   .container {max-width: 450px;}
-//   .nav__list {flex-wrap: wrap;}
-//   .hero__content {flex-direction: column;}
-//   .hero__desc {font-size: 3.3rem;}
-//   .reviews__item {width: calc(100% / 2);}
-//   .form__input-elem {padding: 5px 0rem;}
-// }
-
-// @media (max-width: 480px) {
-//   html {font-size: 14px;}
-//   .best__list {flex-direction: column; align-items: center;}
-//   .reviews__item {width: 100%;}
-//   .form {flex-direction: column;}
-//   .social__list {flex-wrap: wrap;}
-// }
+@import "../blocks/hamb-menu.scss";
+@import "../blocks/team.scss";

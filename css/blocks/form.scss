@@ -7,26 +7,36 @@
   color: #fff;
   display: flex;
 
+  @include tablets {
+    flex-direction: column;
+    padding: 0 15%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+
   &__row {
     display: flex;
-    margin-bottom: 0.685rem;
+    margin-bottom: rem(11px);
+    user-select: none;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &__block {
     flex: 1;
-    margin-right: 1.25rem;
-  }
-
-  .form__right &__block:last-child {
-    margin-right: 0;
+    margin-right: rem(16px);
   }
 }
 
 .form__input-elem {
   width: 100%;
-  padding: 9px 1.25rem;
-  border: 0.125rem solid transparent;
-  border-radius: 5px;
+  padding: rem(9px) rem(18px);
+  border: rem(2px) solid transparent;
+  border-radius: rem(5px);
 
   &:focus {
     outline: none;
@@ -38,15 +48,10 @@
   }
 }
 
-.form__buttons-payement,
-.form__to-call {
-  user-select: none;
-}
-
 .form__radio {
   display: inline-flex;
-  margin-bottom: 1.125rem;
-  margin-right: 1.25rem;
+  margin-bottom: rem(16px);
+  margin-right: rem(16px);
   vertical-align: sub;
 
   &-real {
@@ -63,20 +68,20 @@
 }
 
 .form__radio-visible {
-  width: 14px;
-  height: 14px;
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
-  border: 1px solid #c9c9c9;
+  border: rem(1px) solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
   margin: auto;
-  margin-right: 0.625rem;
+  margin-right: rem(10px);
 
   &:after{
     content: '';
     display: block;
-    width: 7px;
-    height: 7px;
+    width: rem(8px);
+    height: rem(8px);
     border-radius: 50%;
     background: #cb2376;
     position: absolute;

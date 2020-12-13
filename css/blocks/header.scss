@@ -2,9 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.75rem;
+  padding-top: rem(12px);
 
   &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    margin-right: rem(9px);
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__links {
     display: flex;
     align-items: center;
   }

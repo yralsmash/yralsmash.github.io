@@ -1,19 +1,41 @@
 .fixed__menu {
-  position: fixed;
+  position: absolute;
+  top: rem(150px);
+  right: rem(20px);
+  @include tablets {
+    display: none;
+  }
 }
 
 .menu__item {
   display: flex;
   flex-direction: column;
+  padding: rem(10px);
 }
 
 .menu__link {
+  display: block;
+  width: rem(8px);
+  height: rem(8px);
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+
   &::after {
-    content: 'fffff';
+    content: '';
     display: block;
-    width: 20px;
-    height: 20px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
-    color: rgb(228, 56, 56);
+    position: absolute;
+    border: rem(1px) solid #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  &:focus::after {
+    opacity: 1;
   }
 }

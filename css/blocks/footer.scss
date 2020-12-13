@@ -2,10 +2,16 @@
   display: flex;
   justify-content: space-around;
   position: absolute;
-  min-width: 200px;
-  background: transparent;
+  background: rgba($black, .7);
   bottom: 0;
   display: flex;
+  padding: 0 3%;
+
+  @include phones {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__side {
     display: flex;

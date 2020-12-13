@@ -9,11 +9,16 @@
 }
 
 .reviews__item {
-  width: calc(100% / 4);
+  width: 25%;
   height: 50%;
   filter: grayscale(100%);
   background: center center / cover no-repeat;
   position: relative;
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
 
   &:hover {
     .reviews__hover-block {
@@ -24,7 +29,7 @@
 }
 
 .reviews__hover-block {
-  padding: 1.875rem;
+  padding: 10%;
   color: #fff;
   position: absolute;
   top: 0;
@@ -35,15 +40,23 @@
   opacity: 0;
   transform: scale(.8);
   transition: .5s;
+
+  @include tablets {
+    padding: 6%;
+  }
 }
 
 .reviews__title {
-  margin: 1rem 0px;
+  margin-bottom: rem(16px);
   font-family: 'Gagalin Regular';
-  font-size: 1.17rem;
+  font-size: rem(19px);
 }
 
 .reviews__text {
-  line-height: 1.75;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: rem(15px);
+
+  @include phones {
+    display: none;
+  }
 }

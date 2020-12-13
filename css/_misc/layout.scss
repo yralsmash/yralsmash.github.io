@@ -1,11 +1,11 @@
 html {
   font-size: 16px;
-  // @include tablets {
-  //   font-size: 14px;
-  // }
-  // @include phones {
-  //   font-size: 13px;
-  // }
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 html,
@@ -15,27 +15,31 @@ body {
 
 body {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  color: #2f3234;
+  color: $black;
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .container {
   margin: 0 auto;
-  width: auto;
+  position: relative;
+  width: 100%;
   max-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  @include tablets {
+    width: 95%;
+  }
 
   &--without-align {
     justify-content: initial;
@@ -44,7 +48,6 @@ body {
 
 .wrapper {
   position: relative;
-  min-width: 0;
   min-height: 100%;
   overflow: hidden;
 }
@@ -90,4 +93,8 @@ button {
   border: 0;
   background: transparent;
   cursor: pointer;
+}
+
+svg {
+  fill: currentColor;
 }
