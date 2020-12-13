@@ -34,7 +34,7 @@
 
 .form__input-elem {
   width: 100%;
-  padding: rem(9px) rem(18px);
+  padding: rem(9px) rem(14px);
   border: rem(2px) solid transparent;
   border-radius: rem(5px);
 
@@ -92,6 +92,10 @@
   }
 
   &--square {
-    border-radius: 0%;
+    border-radius: initial;
+
+    &:after {
+      border-radius: initial;
+    }
   }
 }

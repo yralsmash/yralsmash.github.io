@@ -6,6 +6,9 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: rem(13px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &--reset {
     background: transparent;

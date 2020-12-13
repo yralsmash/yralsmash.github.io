@@ -573,6 +573,9 @@ svg {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn--reset {
   background: transparent;
@@ -789,7 +792,7 @@ svg {
 
 .form__input-elem {
   width: 100%;
-  padding: 0.5625rem 1.125rem;
+  padding: 0.5625rem 0.875rem;
   border: 0.125rem solid transparent;
   border-radius: 0.3125rem;
 }
@@ -841,7 +844,10 @@ svg {
   opacity: 0;
 }
 .form__radio-visible--square {
-  border-radius: 0%;
+  border-radius: initial;
+}
+.form__radio-visible--square:after {
+  border-radius: initial;
 }
 
 .map {
@@ -1013,7 +1019,7 @@ svg {
   position: relative;
 }
 .team__container {
-  padding: 5% 2% 0 7%;
+  padding: 0 5%;
   position: absolute;
   left: 50%;
   right: 0;
