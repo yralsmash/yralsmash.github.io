@@ -1,4 +1,4 @@
-.fixed__menu {
+.fixed-menu {
   position: absolute;
   top: rem(150px);
   right: rem(20px);
@@ -7,13 +7,13 @@
   }
 }
 
-.menu__item {
+.fixed-menu__item {
   display: flex;
   flex-direction: column;
   padding: rem(10px);
 }
 
-.menu__link {
+.fixed-menu__link {
   display: block;
   width: rem(8px);
   height: rem(8px);
@@ -37,5 +37,10 @@
 
   &:focus::after {
     opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
   }
 }

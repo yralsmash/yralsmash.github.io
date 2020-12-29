@@ -11,4 +11,9 @@
   width: rem(29px);
   height: rem(15px);
   fill: #ffffff;
+
+  &:hover {
+    fill: rgb(223, 210, 210);
+    transition: 1s;
+  }
 }

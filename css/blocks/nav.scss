@@ -33,4 +33,10 @@
     background-color: #fff;
     margin-left: rem(7px);
   }
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(223, 210, 210);
+    transition: 1s;
+  }
 }

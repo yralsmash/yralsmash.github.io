@@ -16,4 +16,9 @@
     font-size: rem(16px);
     margin-left: 5%;
   }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
+  }
 }

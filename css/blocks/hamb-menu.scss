@@ -2,6 +2,11 @@
   @include tablets {
     margin-left: rem(30px);
   }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
+  }
 }
 
 .hamburger-menu-link__bars {

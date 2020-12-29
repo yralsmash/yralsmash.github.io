@@ -9,16 +9,15 @@
 
 .social__link {
   display: flex;
-  opacity: 0.3;
-  transition: .3s;
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 .vk-icon, .fb-icon, .inst-icon, .twitter-icon {
   max-width: rem(26px);
   max-height: rem(22px);
   fill: #1f1d1a;
+
+  &:hover {
+    transition: 1s;
+    fill: #fff;
+  }
 }

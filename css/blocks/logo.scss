@@ -1,4 +1,9 @@
 .logo-icon {
   width: rem(98.265px);
   height: rem(74.317px);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
+  }
 }

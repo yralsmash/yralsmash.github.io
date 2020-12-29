@@ -10,7 +10,7 @@
 <body>
 <div class="wrapper">
   <div class="maincontent">
-    <section class="hero section">
+    <section class="hero section" id="hero">
       <div class="container container--without-align">
         <header class="header">
           <div class="header__logo">
@@ -65,13 +65,13 @@
               <div class="hero__text">
                 <span class="title">мы делаем</span>
 
-                <div class="hero__desc">натуральные бургеры</div>
+                <span class="hero__desc">натуральные бургеры</span>
               </div>
             </div>
           </div>
         </div>
 
-        <button class="to-next-section" type="button">
+        <button class="to-next-section" type="button" title="Далее">
           <div class="to-next-section-arrow">
             <svg class="arrow-scroll-icon">
               <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
@@ -81,9 +81,9 @@
       </div>
     </section>
 
-    <section class="best section">
+    <section class="best section" id="best">
       <div class="container">
-        <div class="title title--color-black">мы лучшие</div>
+        <h1 class="title title--color-black">мы лучшие</h1>
 
         <ul class="best__list">
           <li class="best__item">
@@ -94,7 +94,7 @@
             </div>
 
             <div class="best__desc">
-              <div class="best__title">100% свежее мясо</div>
+              <h3 class="best__title">100% свежее мясо</h3>
 
               <div class="best__text">
                 <p>
@@ -114,7 +114,7 @@
             </div>
 
             <div class="best__desc">
-              <div class="best__title">Ручная сборка</div>
+              <h3 class="best__title">Ручная сборка</h3>
 
               <div class="best__text">
                 <p>
@@ -135,7 +135,7 @@
             </div>
 
             <div class="best__desc">
-              <div class="best__title">Натуральные ингредиенты</div>
+              <h3 class="best__title">Натуральные ингредиенты</h3>
 
               <div class="best__text">
                 <p>
@@ -149,20 +149,83 @@
       </div>
     </section>
 
-    <section class="team section">
-      <div class="team__container">
-        <div class="title">команда</div>
+    <section class="slider section" id="slider">
+      <div class="container">
+        <div class="products-slider">
+          <div class="products-slider__arrows">
+            <a href="#" class="products-slider__arrow products-slider__arrow--direction--prev" title="следующий бургер">
+              <svg class="arrow-scroll-icon">
+                <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
 
-        <ul class="team__list">
-          <li class="team__item">
-            <a href="#" class="team__title">дэниэл редклиф</a>
+            <a href="#" class="products-slider__arrow products-slider__arrow--direction--next" title="следующий бургер">
+              <svg class="arrow-scroll-icon">
+                <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
+          </div>
 
-            <div class="team__desc">
-              <div class="team__desc-picture">
-                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+          <ul class="products">
+            <li class="products__item">
+              <div class="products__container">
+                <div class="products__pictures">
+                  <a href="#slider" class="products__pictures-structure">
+                    <svg class="burger-icon">
+                      <use xlink:href="./img/icons/sprite.svg#burger"></use>
+                    </svg>
+                    <span>состав</span>
+                  </a>
+                  <div class="products__pictures-main">
+                    <img src="./img/burgers-slider/burger-black.png" alt="Burger" class="products__pictures-main-img">
+                  </div>
+                  <div class="products__pictures-kkal">
+                    <svg class="kkal-icon">
+                      <use xlink:href="./img/icons/sprite.svg#kkal"></use>
+                    </svg>
+                    <span class="products__pictures-kkal-number">1200</span>
+                    <span>ккал</span>
+                  </div>
+                </div>
+                <div class="products__desc">
+                  <h1 class="title title--color-white products__title">dark beef burger</h1>
+                  <div class="products__desc-text">
+                    <p>
+                      Ваш старый добрый знакомый, с рубленым бифштексом из 100%
+                      говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                      помидорами, луком, салатом и соусом гриль теперь с добавлением
+                      экзотического соуса чураско.
+                    </p>
+                  </div>
+                  <div class="products__desc-order">
+                    <span class="products__desc-order-cost">
+                      <span class="products__desc-cost">500</span>
+                      <span>рублей</span>
+                    </span>
+                    <button type="button" class="btn">заказать</button>
+                  </div>
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="team section" id="team">
+      <div class="acco__container">
+        <h1 class="title">команда</h1>
+
+        <ul class="acco__list">
+          <li class="acco__item">
+            <a href="#" class="acco__head">дэниэл редклиф</a>
+
+            <div class="acco__body">
+              <div class="acco__body-picture">
+                <img src="./img/team/team-body-img.png" alt="team img" class="acco__body-img">
               </div>
 
-              <div class="team__desc-text">
+              <div class="acco__body-text">
                 <h3>Оператор</h3>
 
                 <p>С радостью поможем подобрать
@@ -173,15 +236,15 @@
             </div>
           </li>
 
-          <li class="team__item">
-            <a href="#" class="team__title">ричард джеймс</a>
+          <li class="acco__item acco__item--active">
+            <a href="#" class="acco__head">ричард джеймс</a>
 
-            <div class="team__desc team__desc--active">
-              <div class="team__desc-picture">
-                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+            <div class="acco__body">
+              <div class="acco__body-picture">
+                <img src="./img/team/team-body-img.png" alt="team img" class="acco__body-img">
               </div>
 
-              <div class="team__desc-text">
+              <div class="acco__body-text">
                 <h3>Оператор</h3>
 
                 <p>С радостью поможем подобрать
@@ -192,15 +255,15 @@
             </div>
           </li>
 
-          <li class="team__item">
-            <a href="#" class="team__title">джейк финн</a>
+          <li class="acco__item">
+            <a href="#" class="acco__head">джейк финн</a>
 
-            <div class="team__desc">
-              <div class="team__desc-picture">
-                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+            <div class="acco__body">
+              <div class="acco__body-picture">
+                <img src="./img/team/team-body-img.png" alt="team img" class="acco__body-img">
               </div>
 
-              <div class="team__desc-text">
+              <div class="acco__body-text">
                 <h3>Оператор</h3>
 
                 <p>С радостью поможем подобрать
@@ -211,15 +274,15 @@
             </div>
           </li>
 
-          <li class="team__item">
-            <a href="#" class="team__title">николай иванов</a>
+          <li class="acco__item">
+            <a href="#" class="acco__head">николай иванов</a>
 
-            <div class="team__desc">
-              <div class="team__desc-picture">
-                <img src="./img/team/team-desc-img.png" alt="team img" class="team__desc-img">
+            <div class="acco__body">
+              <div class="acco__body-picture">
+                <img src="./img/team/team-body-img.png" alt="team img" class="acco__body-img">
               </div>
 
-              <div class="team__desc-text">
+              <div class="acco__body-text">
                 <h3>Оператор</h3>
 
                 <p>С радостью поможем подобрать
@@ -233,7 +296,38 @@
       </div>
     </section>
 
-    <section class="reviews section">
+    <section class="menu section" id="menu">
+      <h1 class="title title--color-white menu__title">меню</h1>
+
+      <ul class="menu-acco__list">
+        <li class="menu-acco__item" style="background-image: url(./img/bg/meet-bg.jpg);">
+          <a href="#menu" class="menu-acco__trigger">
+            <h3 class="menu-acco__trigger-title">для мясоедов</h3>
+          </a>
+          <div class="menu-acco__content">
+            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+          </div>
+        </li>
+        <li class="menu-acco__item" style="background-image: url(./img/bg/vegan-bg.jpg);">
+          <a href="#menu" class="menu-acco__trigger">
+            <h3 class="menu-acco__trigger-title">вегетарианское</h3>
+          </a>
+          <div class="menu-acco__content">
+            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+          </div>
+        </li>
+        <li class="menu-acco__item" style="background-image: url(./img/bg/diet-bg.jpg);">
+          <a href="#menu" class="menu-acco__trigger">
+            <h3 class="menu-acco__trigger-title" style="background-image: url(./img/reviews/8.jpg);">диетическое</h3>
+          </a>
+          <div class="menu-acco__content">
+            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="reviews section" id="reviews">
       <ul class="reviews__list">
         <li class="reviews__item" style="background-image: url(./img/reviews/1.jpg);">
           <div class="reviews__hover-block">
@@ -359,9 +453,13 @@
       </ul>
     </section>
 
-    <section class="order section">
+    <section class="video section" id="video">
+
+    </section>
+
+    <section class="order section" id="order">
       <div class="container">
-        <div class="title">закажите доставку</div>
+        <h1 class="title">закажите доставку</h1>
 
         <form action="" class="form">
           <div class="form__left">
@@ -465,7 +563,7 @@
       </div>
     </section>
 
-    <section class="map section">
+    <section class="map section" id="map">
       <footer class="footer">
         <div class="footer__side footer__side--left">
           <div class="contacts__block">
@@ -525,16 +623,37 @@
 </div>
 
 <!-- fixed__menu -->
-<ul class="fixed__menu">
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
-  <li class="menu__item"><a href="#" class="menu__link"></a></li>
+<ul class="fixed-menu">
+  <li class="fixed-menu__item"><a href="#hero" class="fixed-menu__link" title="Мы делаем"></a></li>
+  <li class="fixed-menu__item"><a href="#best" class="fixed-menu__link" title="О нас"></a></li>
+  <li class="fixed-menu__item"><a href="#slider" class="fixed-menu__link" title="Бургеры"></a></li>
+  <li class="fixed-menu__item"><a href="#team" class="fixed-menu__link" title="Команда"></a></li>
+  <li class="fixed-menu__item"><a href="#menu" class="fixed-menu__link" title="Меню"></a></li>
+  <li class="fixed-menu__item"><a href="#reviews" class="fixed-menu__link" title="Отзывы"></a></li>
+  <li class="fixed-menu__item"><a href="#video" class="fixed-menu__link" title="Как мы работаем"></a></li>
+  <li class="fixed-menu__item"><a href="#order" class="fixed-menu__link" title="Доставка"></a></li>
+  <li class="fixed-menu__item"><a href="#map" class="fixed-menu__link" title="Контакты"></a></li>
 </ul>
+
+<!-- fullscreen-menu-->
+<div class="fullscreen-menu active">
+  <a href="#" class="fullscreen-menu__close">X</a>
+  <nav class="fullscreen-menu__nav">
+    <ul class="menu__list">
+      <li class="menu__item"><a href="#hero" class="menu__link" title="Мы делаем">Мы делаем</a></li>
+      <li class="menu__item"><a href="#best" class="menu__link" title="О нас">О нас</a></li>
+      <li class="menu__item"><a href="#slider" class="menu__link" title="Бургеры">Бургеры</a></li>
+      <li class="menu__item"><a href="#team" class="menu__link" title="Команда">Команда</a></li>
+      <li class="menu__item"><a href="#menu" class="menu__link" title="Меню">Меню</a></li>
+      <li class="menu__item"><a href="#reviews" class="menu__link" title="Отзывы">Отзывы</a></li>
+      <li class="menu__item"><a href="#video" class="menu__link" title="Как мы работаем">Как мы работаем</a></li>
+      <li class="menu__item"><a href="#order" class="menu__link" title="Доставка">Доставка</a></li>
+      <li class="menu__item"><a href="#map" class="menu__link" title="Контакты">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="./js/menu.js"></script>
+<script src="./js/fullscreen-menu.js"></script>
 </body>
 </html>

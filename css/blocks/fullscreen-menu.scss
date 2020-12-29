@@ -1,0 +1,35 @@
+.fullscreen-menu {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  // display: none;
+  background: rgba(#2f3234, .93);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &__close {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.menu {
+  &__list {
+    text-align: center;
+  }
+
+  &__link {
+    font-size: rem(40px);
+    color: white;
+    text-decoration: none;
+  }
+}

@@ -9,19 +9,25 @@
 
 .contacts__location {
   font-style: normal;
+  color: #fff;
 }
 
 .phone {
   font-size: rem(17px);
-  display: flex;
+  display: inline-flex;
   color: $red;
   font-weight: bold;
   text-decoration: none;
-  margin-left: rem(5px);
   align-items: center;
 
   &-icon {
     width: rem(12px);
     height: rem(12px);
+    margin-right: rem(7px);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
   }
 }
