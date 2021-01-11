@@ -170,21 +170,69 @@
             <li class="products__item">
               <div class="products__container">
                 <div class="products__pictures">
-                  <a href="#slider" class="products__pictures-structure">
-                    <svg class="burger-icon">
-                      <use xlink:href="./img/icons/sprite.svg#burger"></use>
-                    </svg>
-                    <span>состав</span>
-                  </a>
+                  <div class="products__pictures-structure">
+                    <a href="#slider" class="products__pictures-structure-link">
+                      <svg class="burger-icon">
+                        <use xlink:href="./img/icons/sprite.svg#burger"></use>
+                      </svg>
+                      <span>состав</span>
+                      <ul class="products__pictures-structure-list">
+                        <li class="products__pictures-structure-item">
+                          <svg class="sauce-icon">
+                            <use xlink:href="./img/icons/sprite.svg#sauce"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                        <li class="products__pictures-structure-item">
+                          <svg class="buns-icon">
+                            <use xlink:href="./img/icons/sprite.svg#buns"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                        <li class="products__pictures-structure-item">
+                          <svg class="salad-icon">
+                            <use xlink:href="./img/icons/sprite.svg#salad"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                        <li class="products__pictures-structure-item">
+                          <svg class="cucumber-icon">
+                            <use xlink:href="./img/icons/sprite.svg#cucumber"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                        <li class="products__pictures-structure-item">
+                          <svg class="cheese-icon">
+                            <use xlink:href="./img/icons/sprite.svg#cheese"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                        <li class="products__pictures-structure-item">
+                          <svg class="beef-icon">
+                            <use xlink:href="./img/icons/sprite.svg#beef"></use>
+                          </svg>
+                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
+                          <span class="products__pictures-structure-weight">30г</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </div>
                   <div class="products__pictures-main">
                     <img src="./img/burgers-slider/burger-black.png" alt="Burger" class="products__pictures-main-img">
                   </div>
                   <div class="products__pictures-kkal">
-                    <svg class="kkal-icon">
-                      <use xlink:href="./img/icons/sprite.svg#kkal"></use>
-                    </svg>
-                    <span class="products__pictures-kkal-number">1200</span>
-                    <span>ккал</span>
+                    <div class="products__pictures-kkal-content">
+                      <svg class="kkal-icon">
+                        <use xlink:href="./img/icons/sprite.svg#kkal"></use>
+                      </svg>
+                      <span class="products__pictures-kkal-content-number">1200</span>
+                      <span>ккал</span>
+                    </div>
                   </div>
                 </div>
                 <div class="products__desc">
@@ -198,10 +246,8 @@
                     </p>
                   </div>
                   <div class="products__desc-order">
-                    <span class="products__desc-order-cost">
-                      <span class="products__desc-cost">500</span>
-                      <span>рублей</span>
-                    </span>
+                    <span class="products__desc-order-cost">500</span>
+                    <span class="products__desc-order-currency">рублей</span>
                     <button type="button" class="btn">заказать</button>
                   </div>
                   </div>
@@ -236,7 +282,7 @@
             </div>
           </li>
 
-          <li class="acco__item acco__item--active">
+          <li class="acco__item active">
             <a href="#" class="acco__head">ричард джеймс</a>
 
             <div class="acco__body">
@@ -318,7 +364,7 @@
         </li>
         <li class="menu-acco__item" style="background-image: url(./img/bg/diet-bg.jpg);">
           <a href="#menu" class="menu-acco__trigger">
-            <h3 class="menu-acco__trigger-title" style="background-image: url(./img/reviews/8.jpg);">диетическое</h3>
+            <h3 class="menu-acco__trigger-title">диетическое</h3>
           </a>
           <div class="menu-acco__content">
             <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
@@ -545,7 +591,11 @@
                   <label class="form__radio">
                     <input type="checkbox" class="form__radio-real">
 
-                    <div class="form__radio-visible form__radio-visible--square"></div>
+                    <div class="form__radio-visible form__radio-visible--square">
+                      <svg class="check-icon">
+                        <use xlink:href="./img/icons/sprite.svg#check"></use>
+                      </svg>
+                    </div>
 
                     <div class="form__radio-text">Не перезванивать</div>
                   </label>
@@ -636,8 +686,8 @@
 </ul>
 
 <!-- fullscreen-menu-->
-<div class="fullscreen-menu active">
-  <a href="#" class="fullscreen-menu__close">X</a>
+<div class="fullscreen-menu">
+  <a href="#" class="fullscreen-menu__close"></a>
   <nav class="fullscreen-menu__nav">
     <ul class="menu__list">
       <li class="menu__item"><a href="#hero" class="menu__link" title="Мы делаем">Мы делаем</a></li>
@@ -653,7 +703,6 @@
   </nav>
 </div>
 
-<script src="./js/menu.js"></script>
-<script src="./js/fullscreen-menu.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

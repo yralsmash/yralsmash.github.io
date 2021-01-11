@@ -25,7 +25,7 @@
   &__item {
     margin: rem(20px) 0;
 
-    &--active {
+    &.active {
       .acco__head {
         transition: 1s;
         color: $yellow;

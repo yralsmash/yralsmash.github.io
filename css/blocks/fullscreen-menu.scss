@@ -4,32 +4,48 @@
   left: 0;
   top: 0;
   bottom: 0;
-  // display: none;
   background: rgba(#2f3234, .93);
   z-index: 1000;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: none;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    right: rem(45px);
+    top: rem(35px);
+
+    &::after, &::before {
+      content: '';
+      display: block;
+      width: rem(26px);
+      height: rem(5px);
+      background: #fff;
+      position: absolute;
+      border-radius: rem(5px);
+    }
+
+    &::after {
+      transform: translateY(-3px)  rotate(-45deg);
+      margin-top: 6px;
+    }
+
+    &::before {
+      margin-bottom: 0;
+      transform: translateY(3px) rotate(45deg);
+    }
+  }
 
   &.active {
     display: flex;
   }
-
-  &__close {
-    color: white;
-    text-decoration: none;
-  }
 }
 
-.menu {
-  &__list {
-    text-align: center;
-  }
-
-  &__link {
-    font-size: rem(40px);
-    color: white;
-    text-decoration: none;
-  }
+.menu__link {
+  padding: rem(20px);
+  font-size: rem(40px);
+  color: white;
+  text-decoration: none;
 }
