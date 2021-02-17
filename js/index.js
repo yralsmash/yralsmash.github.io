@@ -1,56 +1,35 @@
-//1 fullscreen-menu
+  //1 fullscreen-menu
+var activeClass = ('active');
+hideClass = ('hide')
+menu = $('.fullscreen-menu');
+btn = $('.hamburger-menu-link');
+close = $('.fullscreen-menu__close');
+menuItems = $('.menu__item');
 
-const openMenu = document.querySelector('.hamburger-menu-link');
-const menu = document.querySelector('.fullscreen-menu');
-const closeMenu = document.querySelector('.fullscreen-menu__close');
+btn.on('click', function() {
+  menu.toggleClass(hideClass)
+  menuItems.toggleClass(hideClass)
+})
 
-openMenu.addEventListener ('click', (e) => {
+close.on('click', function() {
+  menu.toggleClass(hideClass)
+  menuItems.toggleClass(hideClass)
+})
+
+//2 team
+var head = $('.acco__head');
+body = $('.acco__item');
+
+$(head).on('click', function(e) {
   e.preventDefault();
-  menu.classList.add('active');
+  $(this).closest(body).toggleClass(activeClass).siblings().removeClass(activeClass);
 });
 
-closeMenu.addEventListener ('click', (e) => {
+//3 acco menu
+var trigger = ('.menu-acco__trigger')
+triggerItem = ('.menu-acco__item')
+
+$(trigger).on('click', function(e) {
   e.preventDefault();
-  menu.classList.remove('active');
+  $(this).closest(triggerItem).toggleClass(activeClass).siblings().removeClass(activeClass);
 });
-
-
-
-
-//3 team
-
-const teamHead = document.querySelector('.acco__head');
-const teamBody = document.querySelector('.acco__item');
-
-teamHead.addEventListener('click', (e) => {
-  e.preventDefault();
-  teamBody.classList.add('active')
-})
-
-// teamHead.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   teamBody.classList.remove('active')
-// })
-
-
-
-
-//2 acco menu
-
-const menuItem = document.querySelector('.menu-acco__item');
-const menuTrigger = document.querySelector('.menu-acco__trigger-title');
-const menuContent = document.querySelector('.menu-acco__content');
-// 1. клик по .menu-acco__trigger-title
-// 2. добавляем класс active родителю .menu-acco__trigger
-// 3. а у остальных блоков убрать
-
-menuTrigger.addEventListener('click', (e) => {
-  e.preventDefault();
-  menuItem.classList.add('active')
-  menuTrigger.style.color = 'red';
-})
-menuContent.addEventListener('click', (e) => {
-  e.preventDefault();
-  menuItem.classList.remove('active')
-  menuTrigger.style.color = 'inherit';
-})

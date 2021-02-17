@@ -21,31 +21,41 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
 
     &.active {
-      .menu-acco__content {
-        display: block;
-      }
       .menu-acco__trigger-title {
         color: $yellow;
+      }
+      .menu-acco__content {
+        max-width: rem(540px);
+        padding: rem(15px);
+
+        @include tablets {
+          max-width: rem(385px);
+        }
+
+        @include phones {
+          max-width: rem(220px);
+        }
       }
     }
   }
 
   &__trigger {
-    writing-mode: vertical-rl;
     background: rgba(#000, .6);
-    width: rem(70px);
+    width: rem(50px);
     text-decoration: none;
     position: relative;
     color: #fff;
 
     &-title {
+      writing-mode: vertical-rl;
       font-size: rem(60px);
       font-family: 'Gagalin Regular';
       position: absolute;
       bottom: rem(35px);
-      left: rem(-12px);
+      left: rem(-15px);
       transform: rotate(180deg);
     }
   }
@@ -53,10 +63,9 @@
 
   &__content {
     background: rgba(#2f3234, .93);
+    display: block;
+    transition: 1s;
+    max-width: 0;
     overflow: hidden;
-    display: none;
-    width: 100%;
-    max-width: rem(540px);
-    padding: rem(20px);
   }
 }

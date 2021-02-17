@@ -57,7 +57,8 @@
           <div class="hero__content">
             <div class="hero__left">
               <div class="hero__picture">
-                <img src="./img/hero/hero-burger.png" alt="Burger" class="hero__burger-img">
+                <img srcset="./img/hero/hero-burger1x.png 600w,
+                ./img/hero/hero-burger2x.png 700w" alt="Burger" class="hero__burger-img">
               </div>
             </div>
 
@@ -151,106 +152,104 @@
 
     <section class="slider section" id="slider">
       <div class="container">
-        <div class="products-slider">
-          <div class="products-slider__arrows">
-            <a href="#" class="products-slider__arrow products-slider__arrow--direction--prev" title="следующий бургер">
+        <div class="products__slider">
+          <div class="products__slider-arrows">
+            <button type="button" class="products__slider-arrow products__slider-arrow--direction--prev" title="следующий бургер">
               <svg class="arrow-scroll-icon">
                 <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
               </svg>
-            </a>
+            </button>
 
-            <a href="#" class="products-slider__arrow products-slider__arrow--direction--next" title="следующий бургер">
+            <button type="button" class="products__slider-arrow products__slider-arrow--direction--next" title="следующий бургер">
               <svg class="arrow-scroll-icon">
                 <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
               </svg>
-            </a>
+            </button>
           </div>
 
           <ul class="products">
             <li class="products__item">
-              <div class="products__container">
-                <div class="products__pictures">
-                  <div class="products__pictures-structure">
-                    <a href="#slider" class="products__pictures-structure-link">
-                      <svg class="burger-icon">
-                        <use xlink:href="./img/icons/sprite.svg#burger"></use>
-                      </svg>
-                      <span>состав</span>
-                      <ul class="products__pictures-structure-list">
-                        <li class="products__pictures-structure-item">
-                          <svg class="sauce-icon">
-                            <use xlink:href="./img/icons/sprite.svg#sauce"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                        <li class="products__pictures-structure-item">
-                          <svg class="buns-icon">
-                            <use xlink:href="./img/icons/sprite.svg#buns"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                        <li class="products__pictures-structure-item">
-                          <svg class="salad-icon">
-                            <use xlink:href="./img/icons/sprite.svg#salad"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                        <li class="products__pictures-structure-item">
-                          <svg class="cucumber-icon">
-                            <use xlink:href="./img/icons/sprite.svg#cucumber"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                        <li class="products__pictures-structure-item">
-                          <svg class="cheese-icon">
-                            <use xlink:href="./img/icons/sprite.svg#cheese"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                        <li class="products__pictures-structure-item">
-                          <svg class="beef-icon">
-                            <use xlink:href="./img/icons/sprite.svg#beef"></use>
-                          </svg>
-                          <span class="products__pictures-structure-name">мясо мясо мясо</span>
-                          <span class="products__pictures-structure-weight">30г</span>
-                        </li>
-                      </ul>
-                    </a>
-                  </div>
-                  <div class="products__pictures-main">
-                    <img src="./img/burgers-slider/burger-black.png" alt="Burger" class="products__pictures-main-img">
-                  </div>
-                  <div class="products__pictures-kkal">
-                    <div class="products__pictures-kkal-content">
-                      <svg class="kkal-icon">
-                        <use xlink:href="./img/icons/sprite.svg#kkal"></use>
-                      </svg>
-                      <span class="products__pictures-kkal-content-number">1200</span>
-                      <span>ккал</span>
-                    </div>
+              <div class="products__pictures">
+                <div class="products__pictures-structure">
+                  <button type="button" class="products__pictures-structure-link">
+                    <svg class="burger-icon">
+                      <use xlink:href="./img/icons/sprite.svg#burger"></use>
+                    </svg>
+                    <span>состав</span>
+                    <ul class="products__pictures-structure-list">
+                      <li class="products__pictures-structure-item">
+                        <svg class="sauce-icon">
+                          <use xlink:href="./img/icons/sprite.svg#beef"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Говядина</span>
+                        <span class="products__pictures-structure-weight">300г</span>
+                      </li>
+                      <li class="products__pictures-structure-item">
+                        <svg class="buns-icon">
+                          <use xlink:href="./img/icons/sprite.svg#buns"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Булочки</span>
+                        <span class="products__pictures-structure-weight">100г</span>
+                      </li>
+                      <li class="products__pictures-structure-item">
+                        <svg class="salad-icon">
+                          <use xlink:href="./img/icons/sprite.svg#salad"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Зелень</span>
+                        <span class="products__pictures-structure-weight">70г</span>
+                      </li>
+                      <li class="products__pictures-structure-item">
+                        <svg class="cucumber-icon">
+                          <use xlink:href="./img/icons/sprite.svg#sauce"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Соус</span>
+                        <span class="products__pictures-structure-weight">150г</span>
+                      </li>
+                      <li class="products__pictures-structure-item">
+                        <svg class="cheese-icon">
+                          <use xlink:href="./img/icons/sprite.svg#cucumber"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Овощи</span>
+                        <span class="products__pictures-structure-weight">200г</span>
+                      </li>
+                      <li class="products__pictures-structure-item">
+                        <svg class="beef-icon">
+                          <use xlink:href="./img/icons/sprite.svg#cheese"></use>
+                        </svg>
+                        <span class="products__pictures-structure-name">Сыр</span>
+                        <span class="products__pictures-structure-weight">80г</span>
+                      </li>
+                    </ul>
+                  </button>
+                </div>
+                <div class="products__pictures-main">
+                  <img src="./img/burgers-slider/burger-black.png" alt="Burger" class="products__pictures-main-img">
+                </div>
+                <div class="products__pictures-kkal">
+                  <div class="products__pictures-kkal-content">
+                    <svg class="kkal-icon">
+                      <use xlink:href="./img/icons/sprite.svg#kkal"></use>
+                    </svg>
+                    <span class="products__pictures-kkal-content-number">1200</span>
+                    <span>ккал</span>
                   </div>
                 </div>
-                <div class="products__desc">
-                  <h1 class="title title--color-white products__title">dark beef burger</h1>
-                  <div class="products__desc-text">
-                    <p>
-                      Ваш старый добрый знакомый, с рубленым бифштексом из 100%
-                      говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
-                      помидорами, луком, салатом и соусом гриль теперь с добавлением
-                      экзотического соуса чураско.
-                    </p>
-                  </div>
-                  <div class="products__desc-order">
-                    <span class="products__desc-order-cost">500</span>
-                    <span class="products__desc-order-currency">рублей</span>
-                    <button type="button" class="btn">заказать</button>
-                  </div>
-                  </div>
+              </div>
+              <div class="products__desc">
+                <h1 class="title title--color-white products__title">dark beef burger</h1>
+                <div class="products__desc-text">
+                  <p>
+                    Ваш старый добрый знакомый, с рубленым бифштексом из 100%
+                    говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                    помидорами, луком, салатом и соусом гриль теперь с добавлением
+                    экзотического соуса чураско.
+                  </p>
+                </div>
+                <div class="products__desc-order">
+                  <span class="products__desc-order-cost">500</span>
+                  <span class="products__desc-order-currency">рублей</span>
+                  <button type="button" class="btn">заказать</button>
+                </div>
               </div>
             </li>
           </ul>
@@ -321,7 +320,7 @@
           </li>
 
           <li class="acco__item">
-            <button type="button" class="acco__head">николай иванов</иг>
+            <button type="button" class="acco__head">николай иванов</button>
 
             <div class="acco__body">
               <div class="acco__body-picture">
@@ -347,27 +346,51 @@
 
       <ul class="menu-acco__list">
         <li class="menu-acco__item" style="background-image: url(./img/bg/meet-bg.jpg);">
-          <a href="#menu" class="menu-acco__trigger">
+          <button type="button" class="menu-acco__trigger">
             <h3 class="menu-acco__trigger-title">для мясоедов</h3>
-          </a>
+          </button>
           <div class="menu-acco__content">
-            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+            <div class="menu-acco__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem sapiente doloribus.
+              Repudiandae laborum amet quasi harum reprehenderit.
+              Quam ex atque veritatis dolorem assumenda eius corporis dolore sint.
+              Molestias ex nam, veritatis porro voluptatem sit quae in non corporis harum dignissimos esse, adipisci quaerat itaque odio distinctio blanditiis fugit, laboriosam sunt?
+              Accusantium fugit quo quos impedit? Possimus, sequi quo inventore similique laborum veritatis nesciunt explicabo vero eligendi non quidem commodi deserunt!
+              Alias vel consequuntur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+              Molestias ex nam,uuntur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+            </div>
           </div>
         </li>
         <li class="menu-acco__item" style="background-image: url(./img/bg/vegan-bg.jpg);">
-          <a href="#menu" class="menu-acco__trigger">
+          <button type="button" class="menu-acco__trigger">
             <h3 class="menu-acco__trigger-title">вегетарианское</h3>
-          </a>
+          </button>
           <div class="menu-acco__content">
-            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+            <div class="menu-acco__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem sapiente doloribus.
+              Repudiandae laborum amet quasi harum reprehenderit.
+              Quam ex atque veritatis dolorem assumenda eius corporis dolore sint.
+              Molestias ex nam, veritatis porro voluptatem sit quae in non corporis harum dignissimos esse, adipisci quaerat itaque odio distinctio blanditiis fugit, laboriosam sunt?
+              Accusantium fugit quo quos impedit? Possimus, sequi quo inventore similique laborum veritatis nesciunt explicabo vero eligendi non quidem commodi deserunt!
+              Alias vel consequuntur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+              Molestias ex onsequuntur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+            </div>
           </div>
         </li>
         <li class="menu-acco__item" style="background-image: url(./img/bg/diet-bg.jpg);">
-          <a href="#menu" class="menu-acco__trigger">
+          <button type="button" class="menu-acco__trigger">
             <h3 class="menu-acco__trigger-title">диетическое</h3>
-          </a>
+          </button>
           <div class="menu-acco__content">
-            <div class="menu-acco__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, ducimus?</div>
+            <div class="menu-acco__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem sapiente doloribus.
+              Repudiandae laborum amet quasi harum reprehenderit.
+              Quam ex atque veritatis dolorem assumenda eius corporis dolore sint.
+              Molestias ex nam, veritatis porro voluptatem sit quae in non corporis harum dignissimos esse, adipisci quaerat itaque odio distinctio blanditiis fugit, laboriosam sunt?
+              Accusantium fugit quo quos impedit? Possimus, sequi quo inventore similique laborum veritatis nesciunt explicabo vero eligendi non quidem commodi deserunt!
+              Alias vel consequuntur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+              Molestias ex nam, vtur velit quam excepturi, odit suscipit quae minus eligendi voluptatum provident ipsam autem eius, illo qui, cumque placeat commodi corrupti ad dicta officiis aliquam hic dolor? Recusandae?
+            </div>
           </div>
         </li>
       </ul>
@@ -378,11 +401,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/1.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Арья Старк
             </h3>
 
             <div class="reviews__text">
-              <p>psum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -413,13 +443,17 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/3.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Эмма Уотсон
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem qu
-                o voluptate animi esse dolorum, qui voluptatibus blanditiis facil
-                is pariatur ad vel aliquam, sequi delectus! Deserunt iste cum odit sunt.
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
               </p>
             </div>
 
@@ -430,11 +464,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/4.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Марк Цукерберг
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -444,11 +485,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/5.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Джесси Айзенберг
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -458,11 +506,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/6.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Селена Гомес
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -472,11 +527,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/7.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Уоррен Баффетт
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -486,11 +548,18 @@
         <li class="reviews__item" style="background-image: url(./img/reviews/8.jpg);">
           <div class="reviews__hover-block">
             <h3 class="reviews__title">
-              константин спилберг
+              Джастин Тимберлейк
             </h3>
 
             <div class="reviews__text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit porro hic, ea maxime natus eius aspernatur? Laborum officiis, placeat voluptatibus alias commodi quos nulla dicta enim rem. Pariatur, totam.</p>
+              <p>
+                Мысли все о них и о них, о них и о них.
+                Нельзя устоять, невозможно
+                забыть... Никогда не думал, что
+                булочки могут быть такими
+                мягкими, котлетка такой сочной, а
+                сыр таким расплавленным.
+              </p>
             </div>
 
             <button type="button" class="btn btn-bg-black">подробнее</button>
@@ -686,23 +755,25 @@
 </ul>
 
 <!-- fullscreen-menu-->
-<div class="fullscreen-menu">
+<div class="fullscreen-menu hide">
   <a href="#" class="fullscreen-menu__close"></a>
   <nav class="fullscreen-menu__nav">
     <ul class="menu__list">
-      <li class="menu__item"><a href="#hero" class="menu__link" title="Мы делаем">Мы делаем</a></li>
-      <li class="menu__item"><a href="#best" class="menu__link" title="О нас">О нас</a></li>
-      <li class="menu__item"><a href="#slider" class="menu__link" title="Бургеры">Бургеры</a></li>
-      <li class="menu__item"><a href="#team" class="menu__link" title="Команда">Команда</a></li>
-      <li class="menu__item"><a href="#menu" class="menu__link" title="Меню">Меню</a></li>
-      <li class="menu__item"><a href="#reviews" class="menu__link" title="Отзывы">Отзывы</a></li>
-      <li class="menu__item"><a href="#video" class="menu__link" title="Как мы работаем">Как мы работаем</a></li>
-      <li class="menu__item"><a href="#order" class="menu__link" title="Доставка">Доставка</a></li>
-      <li class="menu__item"><a href="#map" class="menu__link" title="Контакты">Контакты</a></li>
+      <li class="menu__item hide"><a href="#hero" class="menu__link" title="Мы делаем">Мы делаем</a></li>
+      <li class="menu__item hide"><a href="#best" class="menu__link" title="О нас">О нас</a></li>
+      <li class="menu__item hide"><a href="#slider" class="menu__link" title="Бургеры">Бургеры</a></li>
+      <li class="menu__item hide"><a href="#team" class="menu__link" title="Команда">Команда</a></li>
+      <li class="menu__item hide"><a href="#menu" class="menu__link" title="Меню">Меню</a></li>
+      <li class="menu__item hide"><a href="#reviews" class="menu__link" title="Отзывы">Отзывы</a></li>
+      <li class="menu__item hide"><a href="#video" class="menu__link" title="Как мы работаем">Как мы работаем</a></li>
+      <li class="menu__item hide"><a href="#order" class="menu__link" title="Доставка">Доставка</a></li>
+      <li class="menu__item hide"><a href="#map" class="menu__link" title="Контакты">Контакты</a></li>
     </ul>
   </nav>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

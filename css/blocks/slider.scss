@@ -1,28 +1,33 @@
 .slider {
   background-image: linear-gradient($yellow, #f08c34, $yellow);
 }
-.products-slider {
-  display: flex;
+
+.products__slider {
   position: relative;
 
-  &__arrow--direction--prev {
+  &-arrow--direction--prev {
     transform: rotate(90deg);
     position: absolute;
     left: rem(-7px);
     bottom: rem(300px);
   }
 
-  &__arrow--direction--next {
+  &-arrow--direction--next {
     transform: rotate(270deg);
     position: absolute;
     right: rem(-5px);
     bottom: rem(300px);
   }
-
 }
 
-.products__container {
+.products {
   display: flex;
+  overflow: hidden;
+}
+
+.products__item {
+  display: flex;
+  min-width: 100%;
 
   @include tablets {
     text-align: center;
@@ -81,7 +86,6 @@
       position: absolute;
       color: #000;
       background:$red;
-      border: 1px solid #000;
       padding: rem(10px);
       width: rem(250px);
       left: -9999px;
@@ -93,7 +97,11 @@
     &-item {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
+      text-align: left;
+    }
+    &-name {
+      width: rem(125px);
     }
   }
 
@@ -153,6 +161,7 @@
     margin-right: rem(15px);
 
     &-cost {
+      line-height: 1;
       font-size: rem(65px);
     }
 

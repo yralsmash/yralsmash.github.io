@@ -1,5 +1,5 @@
 .fixed-menu {
-  position: absolute;
+  position: fixed;
   top: rem(150px);
   right: rem(20px);
   @include tablets {
