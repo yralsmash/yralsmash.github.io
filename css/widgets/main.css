@@ -649,7 +649,7 @@ svg {
 
 .products__title {
   text-align: left;
-  margin-bottom: 0;
+  line-height: 1;
 }
 @media (max-width: 768px) {
   .products__title {
@@ -1298,6 +1298,8 @@ svg {
   .products__pictures,
 .products__desc {
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -1396,6 +1398,12 @@ svg {
 }
 .products__desc-text {
   color: #fff;
+  padding-right: 1.0625rem;
+}
+@media (max-width: 768px) {
+  .products__desc-text {
+    padding-right: 0;
+  }
 }
 .products__desc-order {
   display: flex;

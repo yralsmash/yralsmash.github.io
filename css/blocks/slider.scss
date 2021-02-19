@@ -47,6 +47,8 @@
 
   @include tablets {
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -95,7 +97,7 @@
       left: -9999px;
       top: 0%;
       opacity: 0;
-      transition: opacity 1s ;
+      transition: opacity 1s;
     }
 
     &-item {
@@ -154,6 +156,11 @@
 
   &-text {
     color: #fff;
+    padding-right: rem(17px);
+
+    @include tablets {
+      padding-right: 0;
+    }
   }
 
   &-order {
