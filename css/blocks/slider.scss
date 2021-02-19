@@ -4,12 +4,14 @@
 
 .products__slider {
   position: relative;
+  overflow: hidden;
 
   &-arrow--direction--prev {
     transform: rotate(90deg);
     position: absolute;
     left: rem(-7px);
     bottom: rem(300px);
+    z-index: 1;
   }
 
   &-arrow--direction--next {
@@ -17,12 +19,13 @@
     position: absolute;
     right: rem(-5px);
     bottom: rem(300px);
+    z-index: 1;
   }
 }
 
-.products {
+.products__list {
   display: flex;
-  overflow: hidden;
+  position: relative;
 }
 
 .products__item {
