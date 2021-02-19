@@ -31,6 +31,7 @@
 
 .products__title {
   text-align: left;
+  margin-bottom: 0;
 
   @include tablets {
     text-align: center;

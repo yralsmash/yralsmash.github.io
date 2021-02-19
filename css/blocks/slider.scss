@@ -43,6 +43,7 @@
 .products__pictures,
 .products__desc {
   width: 50%;
+  padding: rem(21px);
 
   @include tablets {
     width: 100%;
@@ -109,6 +110,7 @@
   }
 
   &-main {
+    padding: rem(15px);
     width: 100%;
 
     &-img {

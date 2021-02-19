@@ -23,7 +23,8 @@ closeMenuLink.on('click', function() {
 });
 
 //2 slider
-var moveSlide = function(container, slideNum) {
+var Slider = $('.products__slider-arrow')
+moveSlide = function(container, slideNum) {
   var items = container.find('.products__item');
   activeSlide = items.filter('.active');
   reqItem = items.eq(slideNum);
@@ -41,7 +42,7 @@ var moveSlide = function(container, slideNum) {
   };
 }
 
-$('.products__slider-arrow').on('click', function(e){
+$(Slider).on('click', function(e){
   e.preventDefault();
 
   var $this = $(this),
