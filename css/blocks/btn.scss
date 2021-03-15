@@ -15,10 +15,20 @@
     text-transform: none;
     font-size: rem(16px);
     margin-left: 5%;
+    border: 1px solid #fff;
   }
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     transition: 1s;
+  }
+
+  &--overlay {
+    font-weight: bold;
+
+    &:hover {
+      background:none;
+      color: #000;
+    }
   }
 }

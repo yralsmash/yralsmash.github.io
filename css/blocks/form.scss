@@ -40,7 +40,7 @@
 
   &:focus {
     outline: none;
-    border-color: orange;
+    border-color: $yellow;
   }
 
   &--textarea {
@@ -115,4 +115,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.form__error {
+  color: red;
+  font-size: rem(20px);
 }

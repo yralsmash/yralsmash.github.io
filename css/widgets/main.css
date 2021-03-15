@@ -397,7 +397,7 @@ body {
 }
 @media (max-width: 768px) {
   .container {
-    width: 95%;
+    width: 96%;
   }
 }
 .container--without-align {
@@ -448,6 +448,9 @@ button {
   border: 0;
   background: transparent;
   cursor: pointer;
+}
+button:focus {
+  outline: none;
 }
 
 svg {
@@ -591,10 +594,18 @@ svg {
   text-transform: none;
   font-size: 1rem;
   margin-left: 5%;
+  border: 1px solid #fff;
 }
 .btn:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   transition: 1s;
+}
+.btn--overlay {
+  font-weight: bold;
+}
+.btn--overlay:hover {
+  background: none;
+  color: #000;
 }
 
 .to-next-section {
@@ -832,7 +843,7 @@ svg {
 }
 .form__input-elem:focus {
   outline: none;
-  border-color: orange;
+  border-color: #f9b43b;
 }
 .form__input-elem--textarea {
   resize: none;
@@ -896,6 +907,11 @@ svg {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.form__error {
+  color: red;
+  font-size: 1.25rem;
 }
 
 .map {
@@ -1197,41 +1213,45 @@ svg {
   color: #fff;
   display: flex;
   z-index: 10;
+  height: 100%;
 }
 .menu-acco__item {
-  overflow: hidden;
   display: flex;
   border-left: 1px solid #fff;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  height: 100%;
 }
-.menu-acco__item.active .menu-acco__trigger-title {
+.menu-acco__item.active .menu-acco__head-title {
   color: #f9b43b;
 }
-.menu-acco__item.active .menu-acco__content {
-  max-width: 33.75rem;
+.menu-acco__item.active .menu-acco__body {
+  width: 33.75rem;
   padding: 0.9375rem;
 }
 @media (max-width: 768px) {
-  .menu-acco__item.active .menu-acco__content {
-    max-width: 24.0625rem;
+  .menu-acco__item.active .menu-acco__body {
+    width: 100%;
+  }
+  .menu-acco__item.active .menu-acco__desc {
+    width: 100%;
   }
 }
-@media (max-width: 480px) {
-  .menu-acco__item.active .menu-acco__content {
-    max-width: 13.75rem;
-  }
-}
-.menu-acco__trigger {
+.menu-acco__head {
   background: rgba(0, 0, 0, 0.6);
   width: 3.125rem;
   text-decoration: none;
   position: relative;
   color: #fff;
+  height: 100%;
 }
-.menu-acco__trigger-title {
+@media (max-width: 480px) {
+  .menu-acco__head {
+    width: 2.8125rem;
+  }
+}
+.menu-acco__head-title {
   writing-mode: vertical-rl;
   font-size: 3.75rem;
   font-family: "Gagalin Regular";
@@ -1239,13 +1259,41 @@ svg {
   bottom: 2.1875rem;
   left: -0.9375rem;
   transform: rotate(180deg);
+  width: 100%;
 }
-.menu-acco__content {
+@media (max-width: 480px) {
+  .menu-acco__head-title {
+    left: -0.75rem;
+    font-size: 3.125rem;
+  }
+}
+.menu-acco__body {
   background: rgba(47, 50, 52, 0.93);
   display: block;
-  transition: 1s;
-  max-width: 0;
+  transition: 0.3s cubic-bezier(0.84, 0.01, 0.3, 0.96);
+  width: 0;
+  height: 100%;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .menu-acco__body {
+    transition: none;
+  }
+}
+.menu-acco__desc {
+  display: flex;
+  width: 33.75rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  padding: 4.0625rem 2.1875rem;
+}
+@media (max-width: 480px) {
+  .menu-acco__desc {
+    padding: 0;
+  }
 }
 
 .slider {
@@ -1428,36 +1476,11 @@ svg {
   fill: #fff;
 }
 
-.sauce-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #000;
-}
-
-.buns-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #000;
-}
-
-.salad-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #000;
-}
-
-.cucumber-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #000;
-}
-
-.cheese-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #000;
-}
-
+.sauce-icon,
+.buns-icon,
+.salad-icon,
+.cucumber-icon,
+.cheese-icon,
 .beef-icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -1581,5 +1604,41 @@ svg {
 .video {
   background: url("../../img/bg/video-bg2.jpg") center center/cover no-repeat;
   position: relative;
+}
+
+.form__overlay {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 1;
+  z-index: 1000;
+  background: rgba(47, 50, 52, 0.93);
+}
+.form__overlay.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 18.75rem;
+  height: 9.375rem;
+  background: #fff;
+  border: 0.1875rem solid #f9b43b;
+  border-radius: 5px;
+}
+.overlay__message {
+  margin-bottom: 0.9375rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

@@ -38,7 +38,7 @@ body {
   justify-content: center;
   height: 100%;
   @include tablets {
-    width: 95%;
+    width: 96%;
   }
 
   &--without-align {
@@ -93,6 +93,9 @@ button {
   border: 0;
   background: transparent;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
 
 svg {
