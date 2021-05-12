@@ -67,24 +67,57 @@ $(Slider).on('click', function(e){
 });
 
 //3 team
-var head = $('.acco__head');
-body = $('.acco__item');
+var teamHead = document.querySelectorAll('.acco__head');
+var teamItem = document.querySelectorAll('.acco__item');
 
-$(head).on('click', function(e) {
-  e.preventDefault();
-  $(this).closest(body).toggleClass(activeClass).siblings().removeClass(activeClass);
-});
+teamHead.forEach ((e) => {
+  e.addEventListener('click', () => {
+    var curParent = e.parentNode;
+    if (curParent.classList.contains(activeClass)) {
+      curParent.classList.remove(activeClass)
+    } else {
+      teamItem.forEach((e) => {
+        e.classList.remove(activeClass);
+      })
+      curParent.classList.add(activeClass)
+    }
+  })
+})
 
 //4 acco menu
-var trigger = ('.menu-acco__head')
-triggerItem = ('.menu-acco__item')
+var triggerHead = document.querySelectorAll('.menu-acco__head')
+var triggerItem = document.querySelectorAll('.menu-acco__item')
 
-$(trigger).on('click', function(e) {
+triggerHead.forEach ((e) => {
+  e.addEventListener('click', () => {
+    var curParent = e.parentNode;
+    if (curParent.classList.contains(activeClass)) {
+      curParent.classList.remove(activeClass)
+    } else {
+      triggerItem.forEach((e) => {
+        e.classList.remove(activeClass);
+      })
+      curParent.classList.add(activeClass)
+    }
+  })
+})
+
+//5 reviews overlay
+var detailsBtn = $('.reviews__btn');
+reviewsOverlay = $('.reviews__overlay');
+reviewsOverlayClose = $('.reviews__overlay-btn');
+
+$(detailsBtn).on('click', function(e) {
   e.preventDefault();
-  $(this).closest(triggerItem).toggleClass(activeClass).siblings().removeClass(activeClass);
+  $(reviewsOverlay).toggleClass(hideClass)
 });
 
-//5 order
+$(reviewsOverlayClose).on('click', function(e) {
+  e.preventDefault();
+  $(reviewsOverlay).toggleClass(hideClass)
+});
+
+//6 order
 const myForm = document.querySelector('.form');
 const sendButton = document.querySelector('#sendBtn');
 
@@ -133,16 +166,126 @@ function validateField(field) {
   return field.checkValidity();
 }
 
-//6 overlay
+//7 form-overlay
 const overlay = document.querySelector('.form__overlay');
 const overlayMessage = document.querySelector('.overlay__message');
 const overlayButton = document.querySelector('.btn--overlay');
+
 overlayButton.addEventListener ('click', function(e) {
   e.preventDefault();
   overlay.classList.add(hideClass);
 });
+
 overlay.addEventListener("click", e => {
   if (e.target === overlay) {
     overlayButton.click();
   }
 });
+
+//8 One-page-scroll
+const sections = $(".section");
+const display = $(".maincontent");
+
+const performTransition = sectionEq => {
+  const position = sectionEq * -100 + '%';
+  // console.log(position)
+
+  display.css({
+    'transform': 'translate(${position})'
+  })
+};
+
+$(document).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+  if (deltaY > 0) {
+    performTransition(2)
+  }
+  if (deltaY < 0) {
+  }
+})
+
+// const sections = $('.section');
+// const display = $('.maincontent');
+// let inScroll = false;
+// const md = new MobileDetect(window.navigator.userAgent);
+
+// const isMobile = md.mobile();
+
+// const setActiveMenuItem = itemEq => {
+//   $('.fixed-menu__item').eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+// }
+
+// const performTransition = sectionEq => {
+//   if (inScroll === false) {
+//     inScroll = true;
+//     const position = sectionEq * -100 + '%';
+//     const transitionIsFinished = 1000;
+//     const mouseInertionIsFinished = 300;
+
+//     display.css({
+//       transform: 'translateY(${position})'
+//     });
+
+//     sections.eq(sectionEq).addClass(activeClass).siblings().removeClass(activeClass);
+
+//     setTimeout(() => {
+//       inScroll = false
+//       setActiveMenuItem(sectionEq);
+//     }, transitionIsFinished + mouseInertionIsFinished);
+//   }
+// };
+
+// const scrollToSection = direction => {
+//   const activeSection = sections.filter('.active');
+//   const prevSection = activeSection.prev();
+//   const nextSection = activeSection.next();
+
+//   if (direction === 'up' && prevSection.length) {
+//     performTransition(prevSection.index());
+//   }
+//   if (direction === 'down' && nextSection.length) {
+//     performTransition(nextSection.index());
+//   }
+// }
+
+// $(document).on({
+//   wheel: e => {
+//     const direction = e.originalEvent.deltaY > 0 ? 'down' : 'up';
+//     scrollToSection(direction);
+//   },
+//   keydown: e => {
+//     switch(e.keyCode) {
+//       case 40:
+//         scrollToSection('down');
+//         break;
+//       case 38:
+//         scrollToSection('up');
+//         break;
+//     }
+//   },
+//   touchMove: e => e.preventDefault()
+// });
+
+// $('[data-scroll-to]').on('click', e => {
+//   e.preventDefault();
+
+//   const target = $(e.currentTarget).attr('data-scroll-to');
+//   performTransition(target);
+// })
+
+// if (isMobile) {
+//   $(document).swipe( {
+//     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+//       /*
+//       * Потому что библиотека возвращает фактическое перемещение пальца вверх,
+//       * а мы основывались на перемещении страницы.
+//       */
+//       const scrollDirection = direction === 'down' ? 'up' : 'down';
+//       scrollToSection(scrollDirection);
+//     }
+//   });
+// }
+
+//9 player
+
+

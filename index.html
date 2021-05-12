@@ -10,11 +10,13 @@
 <body>
 <div class="wrapper">
   <div class="maincontent">
-    <section class="hero section" id="hero">
+
+    <!-- hero section -->
+    <section class="hero section active" id="hero">
       <div class="container container--without-align">
         <header class="header">
           <div class="header__logo">
-            <a href="#" class="logo">
+            <a href="" class="logo">
               <svg class="logo-icon">
                 <use xlink:href="./img/icons/sprite.svg#logo"></use>
               </svg>
@@ -25,28 +27,28 @@
             <div class="header__menu">
               <nav class="nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a href="#best" class="nav__link">о нас</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="1" class="nav__link">о нас</a></li>
 
-                  <li class="nav__item"><a href="#slider" class="nav__link">бургеры</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="2" class="nav__link">бургеры</a></li>
 
-                  <li class="nav__item"><a href="#team" class="nav__link">команда</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="3" class="nav__link">команда</a></li>
 
-                  <li class="nav__item"><a href="#menu" class="nav__link">меню</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="4" class="nav__link">меню</a></li>
 
-                  <li class="nav__item"><a href="#reviews" class="nav__link">отзывы</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="5" class="nav__link">отзывы</a></li>
 
-                  <li class="nav__item"><a href="#video" class="nav__link">как мы работаем</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="6" class="nav__link">как мы работаем</a></li>
 
-                  <li class="nav__item"><a href="#map" class="nav__link">контакты</a></li>
+                  <li class="nav__item"><a href="" data-scroll-to="8" class="nav__link">контакты</a></li>
 
                 </ul>
               </nav>
             </div>
 
             <div class="header__links">
-              <a href="#order" class="btn">заказать</a>
+              <a href="" data-scroll-to="7" class="btn">заказать</a>
 
-              <a href="#" class="hamburger-menu-link">
+              <a href="" data-scroll-to="0" class="hamburger-menu-link">
                 <div class="hamburger-menu-link__bars"></div>
               </a>
             </div>
@@ -72,7 +74,7 @@
           </div>
         </div>
 
-        <a class="to-next-section" title="Далее" href="#best">
+        <a class="to-next-section" href="" data-scroll-to="1" title="Далее" >
           <div class="to-next-section-arrow">
             <svg class="arrow-scroll-icon">
               <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
@@ -81,7 +83,9 @@
         </a>
       </div>
     </section>
+    <!-- end hero section -->
 
+    <!-- best section -->
     <section class="best section" id="best">
       <div class="container">
         <h1 class="title title--color-black">мы лучшие</h1>
@@ -149,10 +153,13 @@
         </ul>
       </div>
     </section>
+    <!-- end best section -->
 
+    <!-- slider section -->
     <section class="slider section" id="slider">
       <div class="container">
         <div class="products__slider">
+          <!-- slider arrows -->
           <div class="products__slider-arrows">
             <button type="button" class="products__slider-arrow products__slider-arrow--direction--prev" title="следующий бургер">
               <svg class="arrow-scroll-icon">
@@ -166,6 +173,7 @@
               </svg>
             </button>
           </div>
+          <!-- end slider arrows -->
 
           <ul class="products__list">
             <li class="products__item active">
@@ -249,10 +257,11 @@
                 <div class="products__desc-order">
                   <span class="products__desc-order-cost">500</span>
                   <span class="products__desc-order-currency">рублей</span>
-                  <button type="button" class="btn">заказать</button>
+                  <button type="button" data-scroll-to="7" class="btn">заказать</button>
                 </div>
               </div>
             </li>
+
             <li class="products__item">
               <div class="products__pictures">
                 <div class="products__pictures-structure">
@@ -334,10 +343,11 @@
                 <div class="products__desc-order">
                   <span class="products__desc-order-cost">500</span>
                   <span class="products__desc-order-currency">рублей</span>
-                  <button type="button" class="btn">заказать</button>
+                  <button type="button" data-scroll-to="7" class="btn">заказать</button>
                 </div>
               </div>
             </li>
+
             <li class="products__item">
               <div class="products__pictures">
                 <div class="products__pictures-structure">
@@ -419,10 +429,11 @@
                 <div class="products__desc-order">
                   <span class="products__desc-order-cost">500</span>
                   <span class="products__desc-order-currency">рублей</span>
-                  <button type="button" class="btn">заказать</button>
+                  <button type="button" data-scroll-to="7" class="btn">заказать</button>
                 </div>
               </div>
             </li>
+
             <li class="products__item">
               <div class="products__pictures">
                 <div class="products__pictures-structure">
@@ -504,10 +515,11 @@
                 <div class="products__desc-order">
                   <span class="products__desc-order-cost">500</span>
                   <span class="products__desc-order-currency">рублей</span>
-                  <button type="button" class="btn">заказать</button>
+                  <button type="button" data-scroll-to="7" class="btn">заказать</button>
                 </div>
               </div>
             </li>
+
             <li class="products__item">
               <div class="products__pictures">
                 <div class="products__pictures-structure">
@@ -589,7 +601,7 @@
                 <div class="products__desc-order">
                   <span class="products__desc-order-cost">500</span>
                   <span class="products__desc-order-currency">рублей</span>
-                  <button type="button" class="btn">заказать</button>
+                  <button type="button" data-scroll-to="7" class="btn">заказать</button>
                 </div>
               </div>
             </li>
@@ -597,7 +609,9 @@
         </div>
       </div>
     </section>
+    <!-- end slider section -->
 
+    <!-- team section -->
     <section class="team section" id="team">
       <div class="acco__container">
         <h1 class="title">команда</h1>
@@ -681,7 +695,9 @@
         </ul>
       </div>
     </section>
+    <!-- end team section -->
 
+    <!-- menu section -->
     <section class="menu section" id="menu">
       <h1 class="title title--color-white menu__title">меню</h1>
 
@@ -690,6 +706,7 @@
           <button type="button" class="menu-acco__head">
             <h3 class="menu-acco__head-title">для мясоедов</h3>
           </button>
+
           <div class="menu-acco__body">
             <div class="menu-acco__desc">
               <p>
@@ -706,10 +723,12 @@
             </div>
           </div>
         </li>
+
         <li class="menu-acco__item" style="background-image: url(./img/bg/vegan-bg.jpg);">
           <button type="button" class="menu-acco__head">
             <h3 class="menu-acco__head-title">вегетарианское</h3>
           </button>
+
           <div class="menu-acco__body">
             <div class="menu-acco__desc">
               <p>
@@ -726,10 +745,12 @@
             </div>
           </div>
         </li>
+
         <li class="menu-acco__item" style="background-image: url(./img/bg/diet-bg.jpg);">
           <button type="button" class="menu-acco__head">
             <h3 class="menu-acco__head-title">диетическое</h3>
           </button>
+
           <div class="menu-acco__body">
             <div class="menu-acco__desc">
               <p>
@@ -748,7 +769,9 @@
         </li>
       </ul>
     </section>
+    <!-- end menu section -->
 
+    <!-- reviews section -->
     <section class="reviews section" id="reviews">
       <ul class="reviews__list">
         <li class="reviews__item" style="background-image: url(./img/reviews/1.jpg);">
@@ -768,7 +791,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -789,7 +812,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -810,7 +833,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -831,7 +854,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -852,7 +875,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -873,7 +896,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -894,7 +917,7 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
 
@@ -915,16 +938,20 @@
               </p>
             </div>
 
-            <button type="button" class="btn btn-bg-black">подробнее</button>
+            <button type="button" class="btn btn-bg-black reviews__btn">подробнее</button>
           </div>
         </li>
       </ul>
     </section>
+    <!-- end reviews section -->
 
+    <!-- video section -->
     <section class="video section" id="video">
 
     </section>
+    <!-- end video section -->
 
+    <!-- order section -->
     <section class="order section" id="order">
       <div class="container">
         <h1 class="title">закажите доставку</h1>
@@ -1036,8 +1063,15 @@
         </form>
       </div>
     </section>
+    <!-- end form section -->
 
+    <!-- map section -->
     <section class="map section" id="map">
+      <!-- interactive map -->
+      <!-- <div id="map" class="map"></div> -->
+      <!-- end interactive map -->
+
+      <!-- footer -->
       <footer class="footer">
         <div class="footer__side footer__side--left">
           <div class="contacts__block">
@@ -1061,28 +1095,31 @@
           <div class="socials">
             <ul class="social__list">
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://vk.com" class="social__link" target="_blank">
                   <svg class="vk-icon">
                     <use xlink:href="./img/icons/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://www.facebook.com" class="social__link" target="_blank">
                   <svg class="fb-icon">
                     <use xlink:href="./img/icons/sprite.svg#fb"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://www.instagram.com" class="social__link" target="_blank">
                   <svg class="inst-icon">
                     <use xlink:href="./img/icons/sprite.svg#inst"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://twitter.com" class="social__link" target="_blank">
                   <svg class="twitter-icon">
                     <use xlink:href="./img/icons/sprite.svg#twitter"></use>
                   </svg>
@@ -1092,49 +1129,78 @@
           </div>
         </div>
       </footer>
+      <!-- end footer -->
     </section>
+    <!-- end map section -->
   </div>
 </div>
 
 <!-- fixed__menu -->
 <ul class="fixed-menu">
-  <li class="fixed-menu__item"><a href="#hero" class="fixed-menu__link" title="Мы делаем"></a></li>
-  <li class="fixed-menu__item"><a href="#best" class="fixed-menu__link" title="О нас"></a></li>
-  <li class="fixed-menu__item"><a href="#slider" class="fixed-menu__link" title="Бургеры"></a></li>
-  <li class="fixed-menu__item"><a href="#team" class="fixed-menu__link" title="Команда"></a></li>
-  <li class="fixed-menu__item"><a href="#menu" class="fixed-menu__link" title="Меню"></a></li>
-  <li class="fixed-menu__item"><a href="#reviews" class="fixed-menu__link" title="Отзывы"></a></li>
-  <li class="fixed-menu__item"><a href="#video" class="fixed-menu__link" title="Как мы работаем"></a></li>
-  <li class="fixed-menu__item"><a href="#order" class="fixed-menu__link" title="Доставка"></a></li>
-  <li class="fixed-menu__item"><a href="#map" class="fixed-menu__link" title="Контакты"></a></li>
+  <li class="fixed-menu__item active"><a href="" data-scroll-to="0" class="fixed-menu__link" title="Мы делаем"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="1" class="fixed-menu__link" title="О нас"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="2" class="fixed-menu__link" title="Бургеры"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="3" class="fixed-menu__link" title="Команда"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="4" class="fixed-menu__link" title="Меню"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="5" class="fixed-menu__link" title="Отзывы"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="6" class="fixed-menu__link" title="Как мы работаем"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="7" class="fixed-menu__link" title="Доставка"></a></li>
+  <li class="fixed-menu__item"><a href="" data-scroll-to="8" class="fixed-menu__link" title="Контакты"></a></li>
 </ul>
+<!-- end fixed__menu -->
 
 <!-- fullscreen-menu-->
 <div class="fullscreen-menu hide">
   <a href="#" class="fullscreen-menu__close"></a>
   <nav class="fullscreen-menu__nav">
     <ul class="menu__list">
-      <li class="menu__item hide"><a href="#hero" class="menu__link" title="Мы делаем">Мы делаем</a></li>
-      <li class="menu__item hide"><a href="#best" class="menu__link" title="О нас">О нас</a></li>
-      <li class="menu__item hide"><a href="#slider" class="menu__link" title="Бургеры">Бургеры</a></li>
-      <li class="menu__item hide"><a href="#team" class="menu__link" title="Команда">Команда</a></li>
-      <li class="menu__item hide"><a href="#menu" class="menu__link" title="Меню">Меню</a></li>
-      <li class="menu__item hide"><a href="#reviews" class="menu__link" title="Отзывы">Отзывы</a></li>
-      <li class="menu__item hide"><a href="#video" class="menu__link" title="Как мы работаем">Как мы работаем</a></li>
-      <li class="menu__item hide"><a href="#order" class="menu__link" title="Доставка">Доставка</a></li>
-      <li class="menu__item hide"><a href="#map" class="menu__link" title="Контакты">Контакты</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="0" class="menu__link" title="Мы делаем">Мы делаем</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="1" class="menu__link" title="О нас">О нас</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="2" class="menu__link" title="Бургеры">Бургеры</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="3" class="menu__link" title="Команда">Команда</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="4" class="menu__link" title="Меню">Меню</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="5" class="menu__link" title="Отзывы">Отзывы</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="6" class="menu__link" title="Как мы работаем">Как мы работаем</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="7" class="menu__link" title="Доставка">Доставка</a></li>
+      <li class="menu__item hide"><a href="" data-scroll-to="8" class="menu__link" title="Контакты">Контакты</a></li>
     </ul>
   </nav>
 </div>
+<!-- end fullscreen-menu-->
 
+<!-- form__overlay-->
 <div class="form__overlay hide">
   <div class="overlay__block">
     <span class="overlay__message">Заказ успешно оформлен</span>
     <button class="btn btn--overlay" type="button">Закрыть</button>
   </div>
 </div>
+<!-- end form__overlay-->
 
+<!-- reviews__overlay-->
+<div class="reviews__overlay hide">
+  <div class="reviews__block">
+    <h3 class="reviews__title">
+      Джастин Тимберлейк
+    </h3>
+    <span class="reviews__overlay-text">
+      Народу было не очень много,
+      официанты приносили все просто моментально!
+      Вкусно и недорого!
+      Также понравился молочный коктейль -
+      вкус детства :)
+    </span>
+    <button class="reviews__overlay-btn" type="button">X</button>
+  </div>
+</div>
+<!-- end reviews__overlay-->
+
+<!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- mobile-scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <!-- scripts -->
 <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+/* arrow-scroll */
+
 .to-next-section {
   height: 0;
   width: 0;
@@ -5,6 +7,11 @@
   position: absolute;
   top: 95%;
   left: 50%;
+
+  &:hover {
+    top: 94.5%;
+    transition: 0.5s;
+  }
 }
 
 .arrow-scroll-icon {
@@ -14,6 +21,6 @@
 
   &:hover {
     fill: rgb(223, 210, 210);
-    transition: 1s;
+    transition: 0.5s;
   }
 }
