@@ -183,108 +183,87 @@ overlay.addEventListener("click", e => {
 });
 
 //8 One-page-scroll
-const sections = $(".section");
-const display = $(".maincontent");
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
+
+const setActiveMenuItem = itemEq => {
+  $('.fixed-menu__item').eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
 
 const performTransition = sectionEq => {
-  const position = sectionEq * -100 + '%';
-  // console.log(position)
+  if (inScroll === false) {
+    inScroll = true;
+    const position = sectionEq * -100 + '%';
+    const transitionIsFinished = 1000;
+    const mouseInertionIsFinished = 300;
 
-  display.css({
-    'transform': 'translate(${position})'
-  })
+    display.css({
+      transform: 'translateY('+position+')'
+    });
+
+    sections.eq(sectionEq).addClass(activeClass).siblings().removeClass(activeClass);
+
+    setTimeout(() => {
+      inScroll = false
+      setActiveMenuItem(sectionEq);
+    }, transitionIsFinished + mouseInertionIsFinished);
+  }
 };
 
-$(document).on('wheel', e => {
-  const deltaY = e.originalEvent.deltaY;
-  if (deltaY > 0) {
-    performTransition(2)
+const scrollToSection = direction => {
+  const activeSection = sections.filter('.active');
+  const prevSection = activeSection.prev();
+  const nextSection = activeSection.next();
+
+  if (direction === 'up' && prevSection.length) {
+    performTransition(prevSection.index());
   }
-  if (deltaY < 0) {
+  if (direction === 'down' && nextSection.length) {
+    performTransition(nextSection.index());
   }
+}
+
+$(document).on({
+  wheel: e => {
+    const direction = e.originalEvent.deltaY > 0 ? 'down' : 'up';
+    scrollToSection(direction);
+  },
+  keydown: e => {
+    switch(e.keyCode) {
+      case 40:
+        scrollToSection('down');
+        break;
+      case 38:
+        scrollToSection('up');
+        break;
+    }
+  },
+  touchMove: e => e.preventDefault()
+});
+
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+
+  const target = $(e.currentTarget).attr('data-scroll-to');
+  performTransition(target);
 })
 
-// const sections = $('.section');
-// const display = $('.maincontent');
-// let inScroll = false;
-// const md = new MobileDetect(window.navigator.userAgent);
-
-// const isMobile = md.mobile();
-
-// const setActiveMenuItem = itemEq => {
-//   $('.fixed-menu__item').eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
-// }
-
-// const performTransition = sectionEq => {
-//   if (inScroll === false) {
-//     inScroll = true;
-//     const position = sectionEq * -100 + '%';
-//     const transitionIsFinished = 1000;
-//     const mouseInertionIsFinished = 300;
-
-//     display.css({
-//       transform: 'translateY(${position})'
-//     });
-
-//     sections.eq(sectionEq).addClass(activeClass).siblings().removeClass(activeClass);
-
-//     setTimeout(() => {
-//       inScroll = false
-//       setActiveMenuItem(sectionEq);
-//     }, transitionIsFinished + mouseInertionIsFinished);
-//   }
-// };
-
-// const scrollToSection = direction => {
-//   const activeSection = sections.filter('.active');
-//   const prevSection = activeSection.prev();
-//   const nextSection = activeSection.next();
-
-//   if (direction === 'up' && prevSection.length) {
-//     performTransition(prevSection.index());
-//   }
-//   if (direction === 'down' && nextSection.length) {
-//     performTransition(nextSection.index());
-//   }
-// }
-
-// $(document).on({
-//   wheel: e => {
-//     const direction = e.originalEvent.deltaY > 0 ? 'down' : 'up';
-//     scrollToSection(direction);
-//   },
-//   keydown: e => {
-//     switch(e.keyCode) {
-//       case 40:
-//         scrollToSection('down');
-//         break;
-//       case 38:
-//         scrollToSection('up');
-//         break;
-//     }
-//   },
-//   touchMove: e => e.preventDefault()
-// });
-
-// $('[data-scroll-to]').on('click', e => {
-//   e.preventDefault();
-
-//   const target = $(e.currentTarget).attr('data-scroll-to');
-//   performTransition(target);
-// })
-
-// if (isMobile) {
-//   $(document).swipe( {
-//     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-//       /*
-//       * Потому что библиотека возвращает фактическое перемещение пальца вверх,
-//       * а мы основывались на перемещении страницы.
-//       */
-//       const scrollDirection = direction === 'down' ? 'up' : 'down';
-//       scrollToSection(scrollDirection);
-//     }
-//   });
-// }
+if (isMobile) {
+  $(document).swipe( {
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      /*
+      * Потому что библиотека возвращает фактическое перемещение пальца вверх,
+      * а мы основывались на перемещении страницы.
+      */
+      const scrollDirection = direction === 'down' ? 'up' : 'down';
+      scrollToSection(scrollDirection);
+    }
+  });
+}
 
 //9 player
 
