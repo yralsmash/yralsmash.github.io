@@ -103,18 +103,25 @@ triggerHead.forEach ((e) => {
 })
 
 //5 reviews overlay
-var detailsBtn = $('.reviews__btn');
-reviewsOverlay = $('.reviews__overlay');
-reviewsOverlayClose = $('.reviews__overlay-btn');
+var detailsBtn = document.querySelectorAll('.reviews__btn');
+reviewsOverlay = document.querySelector('.reviews__overlay');
+reviewsOverlayClose = document.querySelector('.reviews__overlay-btn');
 
-$(detailsBtn).on('click', function(e) {
-  e.preventDefault();
-  $(reviewsOverlay).toggleClass(hideClass)
+detailsBtn.forEach ((e) => {
+  e.addEventListener('click', () => {
+    reviewsOverlay.classList.remove(hideClass);
+  })
 });
 
-$(reviewsOverlayClose).on('click', function(e) {
+reviewsOverlayClose.addEventListener ('click', function(e) {
   e.preventDefault();
-  $(reviewsOverlay).toggleClass(hideClass)
+  reviewsOverlay.classList.add(hideClass);
+});
+
+reviewsOverlay.addEventListener("click", e => {
+  if (e.target === reviewsOverlay) {
+    reviewsOverlayClose.click();
+  }
 });
 
 //6 order
