@@ -139,7 +139,7 @@ sendButton.addEventListener('click', function(e) {
     }
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'http://httpbin.org/post');
+    xhr.open('POST', 'https://httpbin.org/post');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', function() {
       if (xhr.status >=400) {
