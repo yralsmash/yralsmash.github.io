@@ -1,0 +1,30 @@
+.discount {
+  background: #2b2b40;
+  margin-bottom: 57px;
+}
+
+.discount__img__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount__picture {
+  width: 1043px;
+  height: 174px;
+}
+
+.discount__text {
+  position: absolute;
+  color: #ffffff;
+  max-width: 613px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.67;
+}
+
+.discount__text span {
+  font-weight: bold;
+  color: #cb2376;
+}

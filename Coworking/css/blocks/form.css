@@ -1,0 +1,106 @@
+.container__inner {
+  margin-left: 64px;
+  width: 700px;
+  background-color: #f4f4f4;
+}
+
+.form {
+  padding: 51px 5%;
+  display: block;
+  width: 100%;
+}
+
+.form__title {
+  margin-top: 0px;
+  margin-bottom: 23px;
+}
+
+.form__row {
+  margin-bottom: 31px;
+  display: flex;
+}
+
+.form__input {
+  flex: 1;
+  margin-right: 23px;
+}
+
+.form__input:last-child {
+  margin-right: 0;
+}
+
+.form__input-elem {
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.form__input-elem:focus {
+  outline: none;
+  border-color: #cb2376;
+}
+
+.form__input-elem--textarea {
+  resize: vertical;
+}
+
+.form__buttons {
+  display: flex;
+}
+
+.form__buttons:last-child {
+  justify-content: space-between;
+}
+
+.form__photo-title {
+  margin-bottom: 9px;
+  font-size: 14px;
+}
+
+.form__controlls {
+  user-select: none;
+}
+
+.form__radio {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.form__radio-real {
+  display: none;
+}
+
+.form__radio-real:checked ~ .form__radio-visible:after {
+  opacity: 1;
+}
+
+.form__radio-real:checked ~ .form__radio-text {
+  color: #cb2376;
+}
+
+.form__radio-visible {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #c9c9c9;
+  background-image: linear-gradient(to top, #ededed, #ffffff);
+  position: relative;
+  margin-right: 10px;
+}
+
+.form__radio-visible::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cb2376;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}

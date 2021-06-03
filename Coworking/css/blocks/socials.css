@@ -1,0 +1,34 @@
+.social__text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.social__list {
+  display: flex;
+}
+
+.social-item {
+  margin-top: 9px;
+  margin-right: 10px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
+}
+
+.social__wrapper {
+  width: 20px;
+  height: 20px;
+  background: #d3d3d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto
+}
+
+.social__wrapper:hover {
+  transition: 0.5s ;
+  background: #cb2376;
+}

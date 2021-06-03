@@ -1,0 +1,27 @@
+.breadcrumbs {
+  opacity: 0.8;
+  margin-top: 10px;
+  font-family: 'Gotham Pro';
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  letter-spacing: normal;
+  color: rgb(38, 36, 36);
+}
+
+.breadcrumbs__main {
+  text-decoration: none;
+  color: rgb(203, 35, 118);
+}
+
+.breadcrumbs__main:hover {
+  transition: 0.5s;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.breadcrumbs__tariffs::before {
+content: "/";
+}

@@ -1,0 +1,16 @@
+.feedback {
+  margin-bottom: 50px;
+}
+
+.feedback .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback__block {
+  width: 700px;
+  height: 427px;
+  border-radius: 3px;
+  background-color: #f4f4f4;
+}

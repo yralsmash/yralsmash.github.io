@@ -1,0 +1,75 @@
+.contacts__schedule {
+  position: relative;
+}
+
+.schedule {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-size: 14px;
+  color: rgba(203, 35, 118, 0.7);
+  text-decoration: underline;
+  padding: 0 ;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.schedule:hover {
+  color : rgba(138, 208, 246, 0.7);
+}
+
+.contacts__schedule:hover .schedule__block {
+  left: -50px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.schedule__block {
+  opacity: 0;
+  padding: 17px 10px 0;
+  margin-top: 9px;
+  top: 100%;
+  left: -9999px;
+  position: absolute;
+  width: 163px;
+  height: 65px;
+  border-radius: 3px;
+  box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to top, #ffffff, #ffffff);
+}
+
+.schedule__block::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -9px;
+  right: 1px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+.schedule__block::after {
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: -11px;
+  position: absolute;
+}
+
+.schedule__workdays, .schedule__lunch {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  color: #cb2376;
+}
+
+.schedule__lunch {
+  color: #262424;
+}

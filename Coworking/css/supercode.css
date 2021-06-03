@@ -1,0 +1,49 @@
+/* layout */
+
+@import url('./layout/fonts.css');
+@import url('./layout/normalize.css');
+@import url('./layout/base.css');
+
+/* individual elements */
+
+@import url('./blocks/pagination.css');
+@import url('./blocks/breadcrumbs.css');
+@import url('./blocks/btn.css');
+
+/* header */
+
+@import url('./blocks/header.css');
+@import url('./blocks/logo.css');
+@import url('./blocks/contacts.css');
+@import url('./blocks/schedule.css');
+@import url('./blocks/mainphoto.css');
+
+/* sidebar */
+
+@import url('./blocks/sidebar.css');
+
+/* intro */
+
+@import url('./blocks/welcome.css');
+
+/* main-content */
+
+@import url('./blocks/features.css');
+@import url('./blocks/news.css');
+
+/* tariffs */
+
+@import url('./blocks/tariffs.css');
+@import url('./blocks/partners.css');
+
+/* reviews */
+
+@import url('./blocks/reviews.css');
+@import url('./blocks/discount.css');
+@import url('./blocks/feedback.css');
+@import url('./blocks/form.css');
+
+/* footer */
+
+@import url('./blocks/footer.css');
+@import url('./blocks/socials.css');

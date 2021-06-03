@@ -1,0 +1,127 @@
+.navigation__list {
+  padding-left: 56px;
+}
+
+.navigation__sidebar {
+  min-width: 200px;
+}
+
+.navigation__link {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 4;
+  color: #cb2376;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.navigation__link:hover {
+  color: black;
+}
+
+.navigation__link:hover::before {
+  opacity: 0;
+}
+
+.navigation__link:hover::after {
+  opacity: 1;
+}
+
+.navigation__link::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background-image: url(../../img/css_sprites_sidebar.png);
+  background-repeat: no-repeat;
+}
+
+.navigation__link--main::before {
+  width: 17px;
+  height: 15px;
+  background-position: -13px -57px;
+}
+
+.navigation__link--reviews::before {
+  width: 20px;
+  height: 18px;
+  background-position: -13px -13px;
+}
+
+.navigation__link--tariffs::before {
+  width: 19px;
+  height: 16px;
+  background-position: -105px -13px;
+}
+
+.navigation__link::after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -36px;
+  top: -3px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background-image: url(../../img/css_sprites_sidebar.png);
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.navigation__link--main::after {
+  width: 17px;
+  height: 15px;
+  background-position: -56px -57px;
+}
+
+.navigation__link--reviews::after {
+  width: 20px;
+  height: 18px;
+  background-position: -59px -13px;
+}
+
+.navigation__link--tariffs::after {
+  width: 19px;
+  height: 16px;
+  background-position: -105px -55px;
+}
+
+.navigation__link--mainactive,
+.navigation__link--reviewsactive,
+.navigation__link--tariffsactive {
+  color: #221f1f;
+}
+
+.navigation__link--mainactive::before,
+.navigation__link--reviewsactive,
+.navigation__link--tariffsactive,
+.navigation__link--mainactive::after,
+.navigation__link--reviewsactive::after,
+.navigation__link--tariffsactive::after {
+  opacity: 1;
+}
+
+.navigation__text {
+  max-width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.navigation__text:hover {
+  text-decoration: underline;
+  text-decoration-color: #bfbfbf;
+}
