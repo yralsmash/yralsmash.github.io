@@ -1,0 +1,46 @@
+/* hamburger-menu */
+
+.hamburger-menu-link {
+  @include tablets {
+    margin-left: rem(30px);
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 1s;
+  }
+}
+
+.hamburger-menu-link__bars {
+  width: rem(24px);
+  height: rem(4px);
+  background: #fff;
+  position: relative;
+  margin-top: rem(10px);
+  margin-bottom: rem(10px);
+  border-radius: rem(5px);
+  display: none;
+  @include tablets {
+    display: flex;
+  }
+
+  &::after, &::before {
+    content: '';
+    display: block;
+    width: rem(24px);
+    height: rem(4px);
+    background: #fff;
+    position: absolute;
+    border-radius: rem(5px);
+  }
+
+  &::after {
+    top: 100%;
+    margin-top: rem(5px);
+  }
+
+  &::before {
+    bottom: 100%;
+    margin-bottom: rem(5px);
+  }
+}

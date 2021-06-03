@@ -1,0 +1,41 @@
+/* title */
+
+.title {
+  color: $yellow;
+  font-size: rem(75px);
+  margin-bottom: rem(20px);
+  text-align: center;
+  font-family: 'Gagalin Regular';
+
+  @include tablets {
+    font-size: rem(63px);
+  }
+
+  @include phones {
+    font-size: rem(59px);
+    }
+
+  &--color-black {
+    color: black;
+  }
+
+  &--color-white {
+    color: white;
+  }
+}
+
+.menu__title {
+  text-align: left;
+  position: absolute;
+  top: rem(50px);
+  left: rem(50px);
+}
+
+.products__title {
+  text-align: left;
+  line-height: 1;
+
+  @include tablets {
+    text-align: center;
+  }
+}

@@ -1,0 +1,21 @@
+/* arrow-scroll */
+
+.to-next-section {
+  height: 0;
+  width: 0;
+  padding: 0;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+}
+
+.arrow-scroll-icon {
+  width: rem(29px);
+  height: rem(15px);
+  fill: #fff;
+
+  &:hover {
+    fill: #000;
+    transition: 0.5s;
+  }
+}
