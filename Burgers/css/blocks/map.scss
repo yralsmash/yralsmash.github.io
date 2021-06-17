@@ -1,6 +1,17 @@
 /* map-section */
 
 .map {
-  background: url('../../img/bg/map-bg.jpg') center center / cover no-repeat;
-  position: relative;
+  width: 100%;
+  height: 90.8%;
+
+  @include phones {
+    height: 88%;
+  }
+}
+
+.map__item {
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  height: auto;
 }

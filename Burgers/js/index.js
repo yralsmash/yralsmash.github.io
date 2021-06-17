@@ -275,7 +275,11 @@ if (isMobile) {
 //9 player
 const playerStart = $('.player__start');
 const playerPlayback = $('.player__playback');
+const playerWrapper = $('.player__wrapper');
+const playerSplash = $('.player__splash');
 const playerPlaybackButton = $('.player__playback-button');
+const playerCompleted = $('.player__duration-completed');
+const playerEstimate = $('.player__duration-estimate');
 
 
 let player;
@@ -283,7 +287,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('yt-player', {
     height: '405',
     width: '660',
-    videoId: 'M7lc1UVf-VE',
+    videoId: 'DEG2Lg-eAO0',
     playerVars: {
       controls: 0,
       disablekb: 0,
@@ -299,20 +303,43 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
+function onPlayerStateChange(event) {
+  switch(event.data) {
+    case 1:
+      playerStart.addClass('paused');
+      playerWrapper.addClass(activeClass);
+      break;
+    case 2:
+      playerStart.removeClass('paused');
+  }
+}
+
 function onPlayerReady () {
   const duration = player.getDuration();
   let interval;
-
+  updateTimer();
   clearInterval(interval);
   interval = setInterval(() => {
     const completed = player.getCurrentTime();
     const percent = (completed / duration) * 100;
-    $(playerPlaybackButton).css({
-      left: '${percent}%'
-    })
+    updateTimer();
+    changeButtonPosition(percent);
   }, 1000);
 }
 
+function updateTimer() {
+  playerCompleted.text(formatTime(player.getCurrentTime() ));
+  playerEstimate.text(formatTime(player.getDuration() ));
+}
+
+function formatTime(time) {
+  const roundTime = Math.round(time);
+  const minutes = Math.floor(roundTime / 60);
+  const seconds = roundTime - minutes * 60;
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+  return minutes + ":" + formattedSeconds;
+}
 
 $(playerStart).on('click', e => {
   // -1 – воспроизведение видео не началось
@@ -324,15 +351,106 @@ $(playerStart).on('click', e => {
   const playerStatus = player.getPlayerState();
 
   if (playerStatus != -1) {
-    player.playVideo()
-    playerStart.addClass('paused')
-  } else {
-    player.pauseVideo()
-    playerStart.removeClass('paused')
+    player.playVideo();
+  }
+  if (playerStatus == 1) {
+    player.pauseVideo();
   }
 });
 
 $(playerPlayback).on('click', e => {
   const bar = $(e.currentTarget);
   const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercent = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
+
+  changeButtonPosition(clickedPercent);
+  player.seekTo(newPlayerTime);
+});
+
+$(playerSplash).on('click', e => {
+  player.playVideo();
 })
+
+function changeButtonPosition(percent) {
+  $(playerPlaybackButton).css({
+    left: `${percent}%`
+  })
+}
+
+// 10 map
+ymaps.ready(init);
+
+var placemarks = [
+  {
+    latitude: 59.97,
+    longitude: 30.31,
+    hintContent: '<div class="map__item map__hint">улица Литераторов, 17</div>',
+    balloonContent: [
+      '<div class="map__item map__balloon">',
+      '<img class="map__balloon"/>',
+      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
+      '<div class="map__text">Заходите по адресу: <b> ул.Литераторов, 17</b></div>',
+      '</div>'
+    ]
+  }, {
+    latitude: 59.94,
+    longitude: 30.25,
+    hintContent: '<div class="map__item map__hint">Малый проспект В О, 64</div>',
+    balloonContent: [
+      '<div class="map__item map__balloon">',
+      '<img class="map__balloon"/>',
+      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
+      '<div class="map__text">Заходите по адресу: <b>Малый проспект В О, 64</b></div>',
+      '</div>'
+    ]
+  }, {
+    latitude: 59.93,
+    longitude: 30.34,
+    hintContent: '<div class="map__item map__hint">Наб. реки Фонтанки, 56</div>',
+    balloonContent: [
+      '<div class="map__item map__balloon">',
+      '<img class="map__balloon"/>',
+      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
+      '<div class="map__text">Заходите по адресу: <b>Наб. реки Фонтанки, 56</b></div>',
+      '</div>'
+    ]
+  }, {
+    latitude: 59.93,
+    longitude: 30.40,
+    hintContent: '<div class="map__item map__hint">Малоохтинский проспект, 61</div>',
+    balloonContent: [
+      '<div class="map__item map__balloon">',
+      '<img class="map__balloon"/>',
+      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
+      '<div class="map__text">Заходите по адресу: <b>Малоохтинский проспект, 61</b></div>',
+      '</div>'
+    ]
+  }
+];
+
+function init() {
+  let map = new ymaps.Map('map', {
+    center: [59.94, 30.32],
+    zoom: 12,
+    // behaviors: [],
+    // controls: ['zoomControl'],
+  });
+
+  placemarks.forEach(function (obj) {
+    let placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+      hintContent: obj.hintContent,
+      balloonContent: obj.balloonContent.join('')
+    },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: '/yralsmash.github.io/Burgers/img/icons/map-marker.svg',
+        iconImageSize: [46, 58],
+        iconImageOffset: [-23, -57]
+      });
+
+    map.geoObjects.add(placemark);
+  });
+};
+
+//

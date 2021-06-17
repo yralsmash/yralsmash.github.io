@@ -952,20 +952,33 @@
 
         <div class="player">
           <div class="player__wrapper">
-            <div class="yt-player"></div>
-            <!-- <div class="player__splash"></div> -->
+            <div id="yt-player"></div>
+            <div class="player__splash"></div>
           </div>
           <div class="player__controls">
             <button class="player__start">
               <svg class="play-icon">
                 <use xlink:href="./img/icons/sprite.svg#play"></use>
               </svg>
+              <svg class="pause-icon">
+                <use xlink:href="./img/icons/sprite.svg#pause"></use>
+              </svg>
             </button>
             <div class="player__playback">
               <button class="player__playback-button"></button>
             </div>
+            <!-- <div class="player__volume">
+              <button class="player__volume-button">
+                <svg class="volume-icon">
+                  <use xlink:href="./img/icons/sprite.svg#volume"></use>
+                </svg>
+              </button>
+              <div class="player__volume-playback">
+                <button class="player__volume-playback-button"></button>
+              </div>
+            </div> -->
             <div class="player__duration">
-              <span class="player__duration-completed">0:00</span>
+              <span class="player__duration-completed">00:00</span>
               <span class="player__duration-estimate">0:00</span>
             </div>
           </div>
@@ -1089,9 +1102,9 @@
     <!-- end form section -->
 
     <!-- map section -->
-    <section class="map section" id="map">
+    <section class="contacts section" id="contacts">
       <!-- interactive map -->
-      <!-- <div id="map" class="map"></div> -->
+      <div id="map" class="map"></div>
       <!-- end interactive map -->
 
       <!-- footer -->
@@ -1191,15 +1204,6 @@
 </div>
 <!-- end fullscreen-menu-->
 
-<!-- form__overlay-->
-<div class="form__overlay hide">
-  <div class="overlay__block">
-    <span class="overlay__message">Заказ успешно оформлен</span>
-    <button class="btn btn--overlay" type="button">Закрыть</button>
-  </div>
-</div>
-<!-- end form__overlay-->
-
 <!-- reviews__overlay-->
 <div class="reviews__overlay hide">
   <div class="reviews__block">
@@ -1218,13 +1222,30 @@
 </div>
 <!-- end reviews__overlay-->
 
+<!-- form__overlay-->
+<div class="form__overlay hide">
+  <div class="overlay__block">
+    <span class="overlay__message">Заказ успешно оформлен</span>
+    <button class="btn btn--overlay" type="button">Закрыть</button>
+  </div>
+</div>
+<!-- end form__overlay-->
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <!-- mobile-scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-  <!-- scripts -->
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="./js/index.js"></script>
+
+<!-- youtube video api -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- yandex map api -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=432b2953-e3bd-4071-a0c2-83857987f89e" type="text/javascript"></script>
+
+<!-- scripts -->
+<script src="./js/index.js"></script>
+
 </body>
 </html>

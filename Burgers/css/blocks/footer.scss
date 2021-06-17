@@ -1,18 +1,23 @@
 /* footer */
 
+.contacts {
+  position: relative;
+}
+
 .footer {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  background: rgba($black, .7);
+  background: $black;
   bottom: 0;
-  display: flex;
   padding: 0 3%;
+  height: 9.2%;
 
   @include phones {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 12%;
   }
 
   &__side {
