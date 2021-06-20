@@ -444,7 +444,7 @@ function init() {
     },
       {
         iconLayout: 'default#image',
-        iconImageHref: '/yralsmash.github.io/Burgers/img/icons/map-marker.svg',
+        iconImageHref: 'img/icons/map-marker.svg',
         iconImageSize: [46, 58],
         iconImageOffset: [-23, -57]
       });
