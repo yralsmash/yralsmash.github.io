@@ -1813,7 +1813,7 @@ svg {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: absolute;
-  background: #2f3234;
+  background: #191b1c;
   bottom: 0;
   padding: 0 3%;
   height: 9.2%;
@@ -1837,6 +1837,9 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__side--left {
   -webkit-box-pack: start;
@@ -1870,6 +1873,7 @@ svg {
 .contacts__location {
   font-style: normal;
   color: #fff;
+  margin-bottom: 0.625rem;
 }
 
 .phone {

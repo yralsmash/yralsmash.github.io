@@ -1,6 +1,6 @@
   //1 fullscreen-menu
-const activeClass = ('active');
-const hideClass = ('hide')
+const activeClass = 'active';
+const hideClass = 'hide';
 menu = $('.fullscreen-menu');
 btn = $('.hamburger-menu-link');
 closeMenu = $('.fullscreen-menu__close');
